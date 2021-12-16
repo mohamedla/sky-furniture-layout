@@ -7,44 +7,60 @@
     <title>Sky Furniture</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="font-body bg-[color:var(--primary)] text-[color:var(--secondary)] transition ease-linear duration-500">
+<body>
     <!-- wrapper -->
     <div class="m-2 grid grid-cols-1">
         <!-- header -->
-        <header class="grid grid-cols-2 md:grid-cols-4 justify-between items-center box-border px-5 py-2 border-b-2 border-white">
+        <header>
             <div>
                 <img class="w-28 bg-white p-1" src="img/logo_transparent.png" alt="Sky" title="Sky Furniture">
             </div>
-            <div class="hidden md:block md:col-span-2 text-center text-4xl font-title font-extrabold">
+            <div class="title-div">
                 <span>SKY FURNITURE</span>
             </div>
             <div class="flex items-center justify-end">
                 <div class="flex justify-end items-center">
-                    <a href="#" class="border-2 p-2 border-[color:var(--secondary)] font-semibold mx-1 rounded-full  hover:text-[color:var(--primary)] hover:bg-[color:var(--secondary)] transition ease-linear duration-200"><span>Log In</span></a>
-                    <a href="#" class="border-2 p-2 border-[color:var(--secondary)] font-semibold mx-1 rounded-full hover:text-[color:var(--primary)] hover:bg-[color:var(--secondary)] transition ease-linear duration-200"><span>Sign UP</span></a>
+                    <a href="#" class="signbtn"><span>Log In</span></a>
+                    <a href="#" class="signbtn"><span>Sign UP</span></a>
                 </div>
                 <div class="hidden justify-end">
-                    <a href="#" class="mx-2" title="Profile">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                    </a>
-                    <a href="#"class="mx-2" title="Favorite">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-                    </a>
-                    <a href="#" class="mx-2" title="Cart">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                    </a>
+                    <div class="mx-2">
+                        <a href="#" title="Profile">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        </a>
+                    </div>
+                    <div class="mx-2 relative">
+                        <a href="#" title="Favorite">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </a>
+                        <!-- budge -->
+                        <div class="header-budge-position">
+                            <span class="header-budge">10</span>
+                        </div>
+                    </div>
+                    <div class="mx-2 relative">
+                        <a href="#" title="Cart">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </a>
+                        <!-- budge -->
+                        <div class="header-budge-position">
+                            <span class="header-budge">2</span>
+                        </div>
+                    </div>
                 </div>
                 <span class="mx-1 mode"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg></span>
             </div>
         </header>
         <!-- navigation bar -->
-        <nav class="flex justify-center items-center my-2 py-2 border-b-2 border-white text-xl font-bold">
-            <a href="#" class="mx-4 hover:text-lg"><span>Home</span></a>
-            <a href="#" class="mx-4 hover:text-lg"><span>About</span></a>
-            <a href="#" class="mx-4 hover:text-lg"><span>Contact</span></a>
-            <a href="#" class="mx-4  searchTriger">
-                <span><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span>
-            </a>
+        <nav>
+            <div class="nav-bar">
+                <a href="#" class="mx-4 hover:text-lg"><span>Home</span></a>
+                <a href="#" class="mx-4 hover:text-lg"><span>About</span></a>
+                <a href="#" class="mx-4 hover:text-lg"><span>Contact</span></a>
+                <a href="#" class="mx-4  searchTriger">
+                    <span><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span>
+                </a>
+            </div>
         </nav>
         <!-- side bar -->
         <!-- <div>
@@ -53,15 +69,15 @@
         <!-- search bar -->
         <section class="searchbar hidden">
             <!-- Stander search bar -->
-            <div class="border-b-2 border-white sm:flex items-center justify-center my-2 py-2">
+            <div class="searchbar-content">
                 <div class="flex justify-center items-center mb-2">
                     <label class="mx-2 font-bold text-lg">Search</label>
-                    <input class="mx-2 rounded-full h-12 p-2" type="text" placeholder="Enter Model/Brand/Category Name">
-                    <span class="mx-2 rounded-full bg-[color:var(--secondary)] p-2 text-[color:var(--primary)]"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></span>
+                    <input class="search-input" type="text" placeholder="Enter Model/Brand/Category Name">
+                    <span class="searchbtn"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></span>
                 </div>
-                <div class="flex justify-center items-center pb-1">
+                <div class="flex justify-center items-center pb-3">
                     <!-- Advance Search Bar -->
-                    <select class="mx-2 rounded-full p-2 h-12 min-w-min bg-[color:var(--primary)] focus:bg-[color:var(--secondary)] focus:text-[color:var(--primary)] font-bold text-center border-4 border-white focus:border-primary appearance-none bg-arrow" name="" id="" aria-placeholder="Choose Catagory">
+                    <select class="catagoryselector" name="" id="" aria-placeholder="Choose Catagory">
                         <option value="" disabled selected>Select a Catagory</option>
                         <optgroup label="Producte">
                             <option value="">Chairs</option>
@@ -82,16 +98,16 @@
         <main class="m-2">
             <!-- Trending Now -->
             <div>
-                <h2 class="text-\[color\:var\(--secondary\)\] font-extrabold text-3xl mb-2 mt-5">Trending Now</h2>
+                <h2 class="main-title">Trending Now</h2>
                 <!-- cards -->
-                <div class="border-white border-2 box-border p-2 sm:grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="cards-wrapper">
                     <div class="card">
                         <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
                         <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
                         <!-- budge -->
-                        <div class="absolute top-3 left-3 bg-[color:var(--primary)] p-2 rounded-full opacity-80">
+                        <div class="price-budge">
                             <span class="font-bold">989 &pound;</span>
                         </div>
                     </div>
@@ -101,7 +117,7 @@
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
                         <!-- budge -->
-                        <div class="absolute top-3 left-3 bg-[color:var(--primary)] p-2 rounded-full opacity-80">
+                        <div class="price-budge">
                             <span class="font-bold">989 &pound;</span>
                         </div>
                     </div>
@@ -111,7 +127,7 @@
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
                         <!-- budge -->
-                        <div class="absolute top-3 left-3 bg-[color:var(--primary)] p-2 rounded-full opacity-80">
+                        <div class="price-budge">
                             <span class="font-bold">989 &pound;</span>
                         </div>
                     </div>
@@ -121,28 +137,28 @@
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
                         <!-- budge -->
-                        <div class="absolute top-3 left-3 bg-[color:var(--primary)] p-2 rounded-full opacity-80">
+                        <div class="price-budge">
                             <span class="font-bold">989 &pound;</span>
                         </div>
                     </div>
                     <!-- Get More -->
                     <div class="sm:col-span-2 lg:col-span-4 text-center my-2">
-                        <a class="bg-[color:var(--secondary)] p-2 rounded-full hover:p-4 hover:font-bold text-lg transition-all ease-linear duration-200" href="#"><span class="text-[color:var(--primary)]">More >></span></a>
+                        <a class="get-more" href="#"><span class="text-[color:var(--primary)]">More >></span></a>
                     </div>
                 </div>
             </div>
             <!-- Our Most Popular -->
             <div>
-                <h2 class="text-\[color\:var\(--secondary\)\] font-extrabold text-3xl mb-2 mt-5">Our Most Popular</h2>
+                <h2 class="main-title">Our Most Popular</h2>
                 <!-- cards -->
-                <div class="border-white border-2 box-border p-2 sm:grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="cards-wrapper">
                     <div class="card">
                         <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
                         <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
                         <!-- budge -->
-                        <div class="absolute top-3 left-3 bg-[color:var(--primary)] p-2 rounded-full opacity-80">
+                        <div class="price-budge">
                             <span class="font-bold">989 &pound;</span>
                         </div>
                     </div>
@@ -152,7 +168,7 @@
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
                         <!-- budge -->
-                        <div class="absolute top-3 left-3 bg-[color:var(--primary)] p-2 rounded-full opacity-80">
+                        <div class="price-budge">
                             <span class="font-bold">989 &pound;</span>
                         </div>
                     </div>
@@ -162,7 +178,7 @@
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
                         <!-- budge -->
-                        <div class="absolute top-3 left-3 bg-[color:var(--primary)] p-2 rounded-full opacity-80">
+                        <div class="price-budge">
                             <span class="font-bold">989 &pound;</span>
                         </div>
                     </div>
@@ -172,28 +188,28 @@
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
                         <!-- budge -->
-                        <div class="absolute top-3 left-3 bg-[color:var(--primary)] p-2 rounded-full opacity-80">
+                        <div class="price-budge">
                             <span class="font-bold">989 &pound;</span>
                         </div>
                     </div>
                     <!-- Get More -->
                     <div class="sm:col-span-2 lg:col-span-4 text-center my-2">
-                        <a class="bg-[color:var(--secondary)] p-2 rounded-full hover:p-4 hover:font-bold text-lg transition-all ease-linear duration-200" href="#"><span class="text-[color:var(--primary)]">More >></span></a>
+                        <a class="get-more" href="#"><span class="text-[color:var(--primary)]">More >></span></a>
                     </div>
                 </div>
             </div>
             <!-- Recommendations -->
             <div>
-                <h2 class="text-\[color\:var\(--secondary\)\] font-extrabold text-3xl mb-2 mt-5">Recommendations</h2>
+                <h2 class="main-title">Recommendations</h2>
                 <!-- cards -->
-                <div class="border-white border-2 box-border p-2 sm:grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="cards-wrapper">
                     <div class="card">
                         <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
                         <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
                         <!-- budge -->
-                        <div class="absolute top-3 left-3 bg-[color:var(--primary)] p-2 rounded-full opacity-80">
+                        <div class="price-budge">
                             <span class="font-bold">989 &pound;</span>
                         </div>
                     </div>
@@ -203,7 +219,7 @@
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
                         <!-- budge -->
-                        <div class="absolute top-3 left-3 bg-[color:var(--primary)] p-2 rounded-full opacity-80">
+                        <div class="price-budge">
                             <span class="font-bold">989 &pound;</span>
                         </div>
                     </div>
@@ -213,7 +229,7 @@
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
                         <!-- budge -->
-                        <div class="absolute top-3 left-3 bg-[color:var(--primary)] p-2 rounded-full opacity-80">
+                        <div class="price-budge">
                             <span class="font-bold">989 &pound;</span>
                         </div>
                     </div>
@@ -223,13 +239,13 @@
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
                         <!-- budge -->
-                        <div class="absolute top-3 left-3 bg-[color:var(--primary)] p-2 rounded-full opacity-80">
+                        <div class="price-budge">
                             <span class="font-bold">989 &pound;</span>
                         </div>
                     </div>
                     <!-- Get More -->
                     <div class="sm:col-span-2 lg:col-span-4 text-center my-2">
-                        <a class="bg-[color:var(--secondary)] p-2 rounded-full hover:p-4 hover:font-bold text-lg transition-all ease-linear duration-200" href="#"><span class="text-[color:var(--primary)]">More >></span></a>
+                        <a class="get-more" href="#"><span class="text-[color:var(--primary)]">More >></span></a>
                     </div>
                 </div>
             </div>
@@ -246,8 +262,8 @@
             </div>
             <!-- developer links -->
             <div class="flex items-end justify-center">
-                <a href="#" class="mx-5"><span>&copy;Mohamed.<sup>self</sup></span></a>
-                <a href="#"><span>Githup Profile</span></a>
+                <span class="mx-5">&copy;Mohamed.<sup>self</sup></span>
+                <a href="https://github.com/mohamedla" target="blank"><span>Githup Profile</span></a>
             </div>
             </div>
         </footer>

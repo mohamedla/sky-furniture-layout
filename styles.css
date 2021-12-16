@@ -436,6 +436,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: absolute;
 }
 
+.relative{
+  position: relative;
+}
+
 .top-3{
   top: 0.75rem;
 }
@@ -452,24 +456,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: 0.5rem;
 }
 
-.mx-1{
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-}
-
 .mx-2{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
 
-.my-2{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+.mx-1{
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .mx-4{
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+.my-2{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .mx-5{
@@ -509,24 +513,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.h-8{
+  height: 2rem;
+}
+
 .h-6{
   height: 1.5rem;
-}
-
-.h-12{
-  height: 3rem;
-}
-
-.min-h-\[25px\]{
-  min-height: 25px;
-}
-
-.min-h-\[250px\]{
-  min-height: 250px;
-}
-
-.min-h-\[50px\]{
-  min-height: 50px;
 }
 
 .min-h-\[80px\]{
@@ -537,36 +529,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 7rem;
 }
 
+.w-8{
+  width: 2rem;
+}
+
 .w-6{
   width: 1.5rem;
-}
-
-.min-w-min{
-  min-width: -webkit-min-content;
-  min-width: -moz-min-content;
-  min-width: min-content;
-}
-
-.appearance-none{
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-2{
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .grid-rows-3{
   grid-template-rows: repeat(3, minmax(0, 1fr));
-}
-
-.flex-row{
-  flex-direction: row;
 }
 
 .flex-col{
@@ -589,10 +565,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: center;
 }
 
-.justify-between{
-  justify-content: space-between;
-}
-
 .gap-5{
   gap: 1.25rem;
 }
@@ -605,30 +577,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 2px;
 }
 
-.border-4{
-  border-width: 4px;
-}
-
-.border-b-2{
-  border-bottom-width: 2px;
-}
-
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.border-\[color\:var\(--secondary\)\]{
-  border-color: var(--secondary);
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-\[color\:var\(--primary\)\]{
   background-color: var(--primary);
-}
-
-.bg-white{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-\[color\:var\(--secondary\)\]{
@@ -643,40 +603,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0.5rem;
 }
 
-.px-5{
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.py-2{
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.pb-1{
-  padding-bottom: 0.25rem;
+.pb-3{
+  padding-bottom: 0.75rem;
 }
 
 .text-center{
   text-align: center;
-}
-
-.font-body{
-  font-family: Ubuntu;
-}
-
-.font-title{
-  font-family: Nunito;
-}
-
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .text-lg{
@@ -689,21 +621,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.25rem;
 }
 
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
+.font-bold{
+  font-weight: 700;
 }
 
 .font-extrabold{
   font-weight: 800;
-}
-
-.font-semibold{
-  font-weight: 600;
-}
-
-.font-bold{
-  font-weight: 700;
 }
 
 .uppercase{
@@ -712,10 +635,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .capitalize{
   text-transform: capitalize;
-}
-
-.text-\[color\:var\(--secondary\)\]{
-  color: var(--secondary);
 }
 
 .text-\[color\:var\(--primary\)\]{
@@ -735,22 +654,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   opacity: 0.8;
 }
 
-.transition{
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .transition-all{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-
-.duration-500{
-  transition-duration: 500ms;
 }
 
 .duration-200{
@@ -807,8 +714,224 @@ Ensure the default browser behavior of the `hidden` attribute.
   opacity: 0.8;
 }
 
-.hover\:bg-\[color\:var\(--secondary\)\]:hover{
+.catagoryselector{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  height: 3rem;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 9999px;
+  border-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  background-color: var(--primary);
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.catagoryselector:focus{
+  border-color: var(--primary);
   background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.signbtn{
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  border-radius: 9999px;
+  border-width: 2px;
+  border-color: var(--secondary);
+  padding: 0.5rem;
+  font-weight: 600;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+
+.signbtn:hover{
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+header{
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  justify-content: space-between;
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 768px){
+  header{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+body{
+  background-color: var(--primary);
+  font-family: Ubuntu;
+  color: var(--secondary);
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+}
+
+.title-div{
+  display: none;
+  text-align: center;
+  font-family: Nunito;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 800;
+}
+
+@media (min-width: 768px){
+  .title-div{
+    grid-column: span 2 / span 2;
+  }
+
+  .title-div{
+    display: block;
+  }
+}
+
+.header-budge{
+  border-radius: 9999px;
+  background-color: var(--secondary);
+  padding: 0.25rem;
+  color: var(--primary);
+}
+
+.header-budge-position{
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+}
+
+.nav{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  background-color: var(--primary);
+}
+
+.nav-bar{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+.searchbar-content{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 640px){
+  .searchbar-content{
+    display: flex;
+  }
+}
+
+.search-input{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  height: 3rem;
+  border-radius: 9999px;
+  border-width: 4px;
+  border-color: var(--secondary);
+  padding: 0.5rem;
+}
+
+.searchbtn{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--secondary);
+  padding: 0.5rem;
+  color: var(--primary);
+}
+
+.main-title{
+  margin-bottom: 0.5rem;
+  margin-top: 1.25rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 800;
+  color: var(--secondary);
+}
+
+.cards-wrapper{
+  box-sizing: border-box;
+  gap: 1.25rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  padding: 0.5rem;
+}
+
+@media (min-width: 640px){
+  .cards-wrapper{
+    display: grid;
+  }
+
+  .cards-wrapper{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px){
+  .cards-wrapper{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.get-more{
+  border-radius: 9999px;
+  background-color: var(--secondary);
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+
+.get-more:hover{
+  padding: 1rem;
+  font-weight: 700;
 }
 
 .hover\:p-4:hover{
@@ -824,25 +947,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 700;
 }
 
-.hover\:text-\[color\:var\(--primary\)\]:hover{
-  color: var(--primary);
-}
-
-.focus\:bg-\[color\:var\(--secondary\)\]:focus{
-  background-color: var(--secondary);
-}
-
-.focus\:text-\[color\:var\(--primary\)\]:focus{
-  color: var(--primary);
-}
-
 @media (min-width: 640px){
   .sm\:col-span-2{
     grid-column: span 2 / span 2;
-  }
-
-  .sm\:flex{
-    display: flex;
   }
 
   .sm\:grid{
@@ -852,25 +959,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .sm\:flex-row{
-    flex-direction: row;
-  }
 }
 
 @media (min-width: 768px){
-  .md\:col-span-2{
-    grid-column: span 2 / span 2;
-  }
-
-  .md\:block{
-    display: block;
-  }
-
-  .md\:grid-cols-4{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .md\:flex-row{
     flex-direction: row;
   }
