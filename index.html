@@ -5,15 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sky Furniture</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- wrapper -->
-    <div class="m-2 grid grid-cols-1">
+<body class="relative">
+    <!-- loader -->
+    <div id='loader-container'>
+        <div id="loader-wrapper" class="fixed top-0 left-0 w-screen h-screen z-[250]">
+            <div id="loader">          
+            </div>
+            <div class="loader-section section-left left-0"></div>
+            <div class="loader-section section-right right-0"></div>
+        </div>
+    </div>
+    <!-- content wrapper -->
+    <div class="m-2 grid grid-cols-1 relative">
+        <a name='top'></a>
         <!-- header -->
         <header>
             <div>
-                <img class="w-28 bg-white p-1" src="img/logo_transparent.png" alt="Sky" title="Sky Furniture">
+                <a href="#"><img class="w-28 bg-white p-1" src="img/logo_transparent.png" alt="Sky" title="Sky Furniture"></a>
             </div>
             <div class="title-div">
                 <span>SKY FURNITURE</span>
@@ -51,21 +62,46 @@
                 <span class="mx-1 mode"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg></span>
             </div>
         </header>
+        <!-- To Page Top -->
+        <div class="bg-[color:var(--secondary)] text-[color:var(--primary)] p-2 rounded-full fixed bottom-4 right-4 z-10">
+            <a href="#top"><span><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z"></path></svg></span></a>
+        </div>
         <!-- navigation bar -->
-        <nav>
+        <nav class="relative">
+            <div class="absolute top-3 left-3 sidebar-triger">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </div>
             <div class="nav-bar">
-                <a href="#" class="mx-4 hover:text-lg"><span>Home</span></a>
-                <a href="#" class="mx-4 hover:text-lg"><span>About</span></a>
-                <a href="#" class="mx-4 hover:text-lg"><span>Contact</span></a>
+                <a href="#" class="mx-4 hover:text-lg underline underline-offset-4"><span>Home</span></a>
+                <a href="./about.html" class="mx-4 hover:text-lg"><span>About</span></a>
+                <a href="./contact.html" class="mx-4 hover:text-lg"><span>Contact</span></a>
                 <a href="#" class="mx-4  searchTriger">
                     <span><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span>
                 </a>
             </div>
         </nav>
         <!-- side bar -->
-        <!-- <div>
-
-        </div> -->
+        <div class="side-bar hidden">
+            <div class="sidebar-close mb-16">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </div>
+            <!-- main links -->
+            <div class="flex flex-col items-end text-2xl font-bold mb-5">
+                <a class="hover:text-xl" href="#"><span>Products</span></a>
+                <a class="hover:text-xl" href="#"><span>Rooms</span></a>
+                <a class="hover:text-xl" href="#"><span>Brands</span></a>
+                <a class="hover:text-xl" href="#"><span>Custom Order</span></a>
+                <a class="hover:text-xl" href="#"><span>Offers</span></a>
+                <a class="hover:text-xl" href="#"><span>What's New</span></a>
+            </div>
+            <!-- additions links -->
+            <div class="flex flex-col items-end font-semibold text-lg">
+                <a class="hover:text-xl" href="./contact.html"><span>Contacts</span></a>
+                <a class="hover:text-xl" href="./about.html#about"><span>About Sky</span></a>
+                <a class="hover:text-xl" href="./about.html#policy"><span>Policy</span></a>
+                <a class="hover:text-xl" href="./about.html#stores"><span>Stores</span></a>
+            </div>
+        </div>
         <!-- search bar -->
         <section class="searchbar hidden">
             <!-- Stander search bar -->
@@ -81,7 +117,8 @@
                         <option value="" disabled selected>Select a Catagory</option>
                         <optgroup label="Producte">
                             <option value="">Chairs</option>
-                            <option value="">Tables</option>
+                            <option value="">Tables & Disks</option>
+                            <option value="">Beds</option>
                         </optgroup>
                         <optgroup label="Room">
                             <option class="" value="">Bed Room</option>
@@ -105,10 +142,19 @@
                         <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
                         <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
-                        <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
+                        <span class="block"><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
+                        <!-- Rating Stars -->
+                        <span class="flex items-center">
+                            <span class="font-bold">Rating:</span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                        </span>
                         <!-- budge -->
                         <div class="price-budge">
-                            <span class="font-bold">989 &pound;</span>
+                            <span class="font-bold">989 &dollar;</span>
                         </div>
                     </div>
                     <div class="card">
@@ -116,9 +162,18 @@
                         <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
+                        <!-- Rating Stars -->
+                        <span class="flex items-center">
+                            <span class="font-bold">Rating:</span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                        </span>
                         <!-- budge -->
                         <div class="price-budge">
-                            <span class="font-bold">989 &pound;</span>
+                            <span class="font-bold">989 &dollar;</span>
                         </div>
                     </div>
                     <div class="card">
@@ -126,9 +181,18 @@
                         <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
+                        <!-- Rating Stars -->
+                        <span class="flex items-center">
+                            <span class="font-bold">Rating:</span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                        </span>
                         <!-- budge -->
                         <div class="price-budge">
-                            <span class="font-bold">989 &pound;</span>
+                            <span class="font-bold">989 &dollar;</span>
                         </div>
                     </div>
                     <div class="card">
@@ -136,9 +200,18 @@
                         <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
+                        <!-- Rating Stars -->
+                        <span class="flex items-center">
+                            <span class="font-bold">Rating:</span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                        </span>
                         <!-- budge -->
                         <div class="price-budge">
-                            <span class="font-bold">989 &pound;</span>
+                            <span class="font-bold">989 &dollar;</span>
                         </div>
                     </div>
                     <!-- Get More -->
@@ -156,10 +229,19 @@
                         <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
                         <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
-                        <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
+                        <span class="block"><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
+                        <!-- Rating Stars -->
+                        <span class="flex items-center">
+                            <span class="font-bold">Rating:</span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                        </span>
                         <!-- budge -->
                         <div class="price-budge">
-                            <span class="font-bold">989 &pound;</span>
+                            <span class="font-bold">989 &dollar;</span>
                         </div>
                     </div>
                     <div class="card">
@@ -167,9 +249,18 @@
                         <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
+                        <!-- Rating Stars -->
+                        <span class="flex items-center">
+                            <span class="font-bold">Rating:</span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                        </span>
                         <!-- budge -->
                         <div class="price-budge">
-                            <span class="font-bold">989 &pound;</span>
+                            <span class="font-bold">989 &dollar;</span>
                         </div>
                     </div>
                     <div class="card">
@@ -177,9 +268,18 @@
                         <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
+                        <!-- Rating Stars -->
+                        <span class="flex items-center">
+                            <span class="font-bold">Rating:</span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                        </span>
                         <!-- budge -->
                         <div class="price-budge">
-                            <span class="font-bold">989 &pound;</span>
+                            <span class="font-bold">989 &dollar;</span>
                         </div>
                     </div>
                     <div class="card">
@@ -187,9 +287,18 @@
                         <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
+                        <!-- Rating Stars -->
+                        <span class="flex items-center">
+                            <span class="font-bold">Rating:</span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                        </span>
                         <!-- budge -->
                         <div class="price-budge">
-                            <span class="font-bold">989 &pound;</span>
+                            <span class="font-bold">989 &dollar;</span>
                         </div>
                     </div>
                     <!-- Get More -->
@@ -207,10 +316,19 @@
                         <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
                         <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
-                        <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
+                        <span class="block"><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
+                        <!-- Rating Stars -->
+                        <span class="flex items-center">
+                            <span class="font-bold">Rating:</span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                        </span>
                         <!-- budge -->
                         <div class="price-budge">
-                            <span class="font-bold">989 &pound;</span>
+                            <span class="font-bold">989 &dollar;</span>
                         </div>
                     </div>
                     <div class="card">
@@ -218,9 +336,18 @@
                         <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
+                        <!-- Rating Stars -->
+                        <span class="flex items-center">
+                            <span class="font-bold">Rating:</span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                        </span>
                         <!-- budge -->
                         <div class="price-budge">
-                            <span class="font-bold">989 &pound;</span>
+                            <span class="font-bold">989 &dollar;</span>
                         </div>
                     </div>
                     <div class="card">
@@ -228,9 +355,18 @@
                         <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
+                        <!-- Rating Stars -->
+                        <span class="flex items-center">
+                            <span class="font-bold">Rating:</span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                        </span>
                         <!-- budge -->
                         <div class="price-budge">
-                            <span class="font-bold">989 &pound;</span>
+                            <span class="font-bold">989 &dollar;</span>
                         </div>
                     </div>
                     <div class="card">
@@ -238,9 +374,18 @@
                         <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
                         <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
                         <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
+                        <!-- Rating Stars -->
+                        <span class="flex items-center">
+                            <span class="font-bold">Rating:</span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                            <span class="fa fa-star checked"></span> &ThickSpace;
+                        </span>
                         <!-- budge -->
                         <div class="price-budge">
-                            <span class="font-bold">989 &pound;</span>
+                            <span class="font-bold">989 &dollar;</span>
                         </div>
                     </div>
                     <!-- Get More -->
@@ -254,17 +399,18 @@
         <footer class="mt-5 bg-[color:var(--secondary)] text-[color:var(--primary)]">
             <div class=" grid grid-rows-3">
                 <!-- sit addintional links -->
-            <div class="row-span-2 min-h-[80px] flex flex-col md:flex-row justify-center items-center text-lg font-bold underline underline-offset-1">
-                <a class="mx-2" href="#"><span>Customer Service</span></a>
-                <a class="mx-2" href="#"><span>About Sky</span></a>
-                <a class="mx-2" href="#"><span>Stores</span></a>
-                <a class="mx-2" href="#"><span>Policy</span></a>
-            </div>
-            <!-- developer links -->
-            <div class="flex items-end justify-center">
-                <span class="mx-5">&copy;Mohamed.<sup>self</sup></span>
-                <a href="https://github.com/mohamedla" target="blank"><span>Githup Profile</span></a>
-            </div>
+                <div class="row-span-2 min-h-[80px] flex flex-col md:flex-row justify-center items-center text-lg font-bold underline underline-offset-1">
+                    <a class="mx-2" href="./contact.html"><span>Customer Service</span></a>
+                    <a class="mx-2" href="./about.html#about"><span>About Sky</span></a>
+                    <a class="mx-2" href="./about.html#stores"><span>Stores</span></a>
+                    <a class="mx-2" href="#"><span>Home</span></a>
+                    <a class="mx-2" href="./about.html#policy"><span>Policy</span></a>
+                </div>
+                <!-- developer links -->
+                <div class="flex items-end justify-center">
+                    <span class="mx-5">&copy;Mohamed.<sup>self</sup></span>
+                    <a href="https://github.com/mohamedla" target="blank"><span>Githup Profile</span></a>
+                </div>
             </div>
         </footer>
     </div>
