@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sky Furniture</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="relative">
@@ -34,7 +33,7 @@
         <!-- header -->
         <header>
             <div>
-                <a href="#"><img class="w-28 bg-white p-1" src="img/logo_transparent.png" alt="Sky" title="Sky Furniture"></a>
+                <a href="./index.html"><img class="w-28 bg-white p-1" src="img/logo_transparent.png" alt="Sky" title="Sky Furniture"></a>
             </div>
             <div class="title-div">
                 <span>SKY FURNITURE</span>
@@ -73,7 +72,7 @@
             </div>
         </header>
         <!-- To Page Top -->
-        <div class="bg-[color:var(--secondary)] text-[color:var(--primary)] p-2 rounded-full fixed bottom-4 right-4 z-[45]">
+        <div class="gototop">
             <a href="#top"><span><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z"></path></svg></span></a>
         </div>
         <!-- navigation bar -->
@@ -91,19 +90,19 @@
             </div>
         </nav>
         <!-- side bar -->
-        <div class="side-bar-container hidden fixed h-screen z-40 w-screen">
+        <div class="side-bar-container hidden">
             <div class="side-bar hidden">
                 <div class="sidebar-close mb-16">
                     <svg class="w-6 h-6" fill="no brne" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </div>
                 <!-- main links -->
                 <div class="flex flex-col items-end text-2xl font-bold mb-5">
-                    <a class="hover:text-xl" href="#"><span>Products</span></a>
-                    <a class="hover:text-xl" href="#"><span>Rooms</span></a>
-                    <a class="hover:text-xl" href="#"><span>Brands</span></a>
+                    <a class="hover:text-xl" href="./search.html"><span>Products</span></a>
+                    <a class="hover:text-xl" href="./search.html"><span>Rooms</span></a>
+                    <a class="hover:text-xl" href="./about.html#brands"><span>Brands</span></a>
                     <a class="hover:text-xl" href="#"><span>Custom Order</span></a>
-                    <a class="hover:text-xl" href="#"><span>Offers</span></a>
-                    <a class="hover:text-xl" href="#"><span>What's New</span></a>
+                    <a class="hover:text-xl" href="./search.html"><span>Offers</span></a>
+                    <a class="hover:text-xl" href="./search.html"><span>What's New</span></a>
                 </div>
                 <!-- additions links -->
                 <div class="flex flex-col items-end font-semibold text-lg">
@@ -120,8 +119,10 @@
             <div class="searchbar-content">
                 <div class="flex justify-center items-center mb-2">
                     <label class="mx-2 font-bold text-lg">Search</label>
-                    <input class="search-input" type="text" placeholder="Enter Model/Brand/Category Name">
-                    <span class="searchbtn"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></span>
+                    <input id="searchvalue" class="search-input" type="text" placeholder="Enter Model/Brand/Category Name">
+                    <div class="searchbtn">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
                 </div>
                 <div class="flex justify-center items-center pb-3">
                     <!-- Advance Search Bar -->
@@ -145,35 +146,35 @@
         </section>
         <!-- content -->
         <main class="m-2">
-            <div class="border-2 border-white p-2">
+            <div class="border-2 border-white p-2 rounded-md ">
                 <div class="grid grid-flow-col auto-cols-max gap-5 ">
                     <div class="m-5 md:m-10 w-fit">
                         <div class="flex justify-center">
-                            <div id="darkgary-item" class="relative border-2 border-[color:var(--secondary)] box-border p-4 rounded z-0">
-                                <img class="h-32 sm:h-80 mb-2 w-32 sm:w-80  object-cover rounded" src="./img/item-2/ekeroe-armchair-skiftebo-dark-grey.webp" alt="black-chair">
+                            <div id="darkgary-item" class="mainitemimage-container">
+                                <img class="mainitemimage fullimage-triger" src="./img/item-2/ekeroe-armchair-skiftebo-dark-grey.webp" alt="black-chair">
                             </div>
-                            <div id="darkblue-item" class="relative hidden border-2 border-[color:var(--secondary)] box-border p-4 rounded z-0">
-                                <img class="h-32 sm:h-80 mb-2 w-32 sm:w-80  object-cover rounded" src="./img/item-2/ekeroe-armchair-skiftebo-dark-blue_.webp" alt="white-chair">
+                            <div id="darkblue-item" class="mainitemimage-container hidden">
+                                <img class="mainitemimage fullimage-triger" src="./img/item-2/ekeroe-armchair-skiftebo-dark-blue_.webp" alt="white-chair">
                             </div>
-                            <div id="yellow-item" class="relative hidden border-2 border-[color:var(--secondary)] box-border p-4 rounded z-0">
-                                <img class="h-32 sm:h-80 mb-2 w-32 sm:w-80  object-cover rounded" src="./img/item-2/ekeroe-armchair-skiftebo-yellow.webp" alt="white-chair">
+                            <div id="yellow-item" class="mainitemimage-container hidden">
+                                <img class="mainitemimage fullimage-triger" src="./img/item-2/ekeroe-armchair-skiftebo-yellow.webp" alt="white-chair">
                             </div>
-                            <div id="orange-item" class="relative hidden border-2 border-[color:var(--secondary)] box-border p-4 rounded z-0">
-                                <img class="h-32 sm:h-80 mb-2 w-32 sm:w-80  object-cover rounded" src="./img/item-2/ekeroe-armchair-skiftebo-orange.webp" alt="white-chair">
+                            <div id="orange-item" class="mainitemimage-container hidden">
+                                <img class="mainitemimage fullimage-triger" src="./img/item-2/ekeroe-armchair-skiftebo-orange.webp" alt="white-chair">
                             </div>
-                            <div id="beige-item" class="relative hidden border-2 border-[color:var(--secondary)] box-border p-4 rounded z-0">
-                                <img class="h-32 sm:h-80 mb-2 w-32 sm:w-80  object-cover rounded" src="./img/item-2/ekeroe-armchair-skiftebo-beige.webp" alt="white-chair">
+                            <div id="beige-item" class="mainitemimage-container hidden">
+                                <img class="mainitemimage fullimage-triger" src="./img/item-2/ekeroe-armchair-skiftebo-beige.webp" alt="white-chair">
                             </div>
                         </div>
                         <div class="flex items-center my-5">
                             <!-- Rating Stars -->
                             <span class="flex items-center">
                                 <span class="font-bold">Rating:</span> &ThickSpace;
-                                <span class="fa fa-star checked"></span> &ThickSpace;
-                                <span class="fa fa-star checked"></span> &ThickSpace;
-                                <span class="fa fa-star checked"></span> &ThickSpace;
-                                <span class="fa fa-star checked"></span> &ThickSpace;
-                                <span class="fa fa-star"></span> &ThickSpace;
+                                <svg class="w-6 h-6 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                <svg class="w-6 h-6 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                <svg class="w-6 h-6 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                <svg class="w-6 h-6 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
                                 <sup>(25)</sup>
                             </span>
                         </div>
@@ -202,7 +203,7 @@
                             </div>
                         </div>
                         <div class="flex justify-around items-center">
-                            <div class="border-2 border-[color:var(--secondary)] rounded-full py-2 px-10 hover:bg-[color:var(--secondary)] hover:text-[color:var(--primary)] font-bold">
+                            <div id="addtocartmain" class="addtocartmain border-2 border-[color:var(--secondary)] rounded-full py-2 px-10 font-bold">
                                 <span>Add To Cart</span>
                             </div>
                             <div class="hidden bg-red-500"></div>
@@ -250,15 +251,14 @@
                 <h3 class="capitalize text-xl font-bold mb-5">you might also like</h3>
                 <!-- cards -->
                 <div class="relative">
-                    <div id="scroll-right" class="bg-[color:var(--secondary)] text-[color:var(--primary)] p-2 z-30 rounded-full absolute top-50/50 right-2">
+                    <div id="scroll-right" class="scroll-arrow right-2">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </div>
-                    <div id="scroll-left" class="bg-[color:var(--secondary)] text-[color:var(--primary)] p-2 z-30 rounded-full absolute top-50/50 left-2">
+                    <div id="scroll-left" class="scroll-arrow left-2">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                     </div>
-                    <div id="item-slider" class="border-white border-2 box-border p-2 h-[22rem] overflow-x-auto overflow-y-hidden whitespace-nowrap relative">
-                        <div class="absolute w-full h-full transition-all ease-linear duration-200">
-                            <div class="card mx-2 h-80 w-[250px] whitespace-normal">
+                    <div id="item-slider" class="item-slider">
+                            <div class="card">
                                 <a href="#">
                                     <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
                                     <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
@@ -266,11 +266,11 @@
                                     <!-- Rating Stars -->
                                     <span class="flex items-center">
                                         <span class="font-bold">Rating:</span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
                                         <sup>(25)</sup>
                                     </span>
                                     <!-- budges -->
@@ -292,7 +292,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card mx-2 h-80 w-[250px] whitespace-normal">
+                            <div class="card">
                                 <a href="#">
                                     <img class="item-img" src="img/balcony.avif" alt="living-room" title="TANNISBY Living Room">
                                     <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
@@ -300,11 +300,11 @@
                                     <!-- Rating Stars -->
                                     <span class="flex items-center">
                                         <span class="font-bold">Rating:</span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
                                         <sup>(25)</sup>
                                     </span>
                                     <!-- budges -->
@@ -326,7 +326,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card mx-2 h-80 w-[250px] whitespace-normal">
+                            <div class="card">
                                 <a href="#">
                                     <img class="item-img" src="img/bed-room.avif" alt="living-room" title="TANNISBY Living Room">
                                     <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
@@ -334,11 +334,11 @@
                                     <!-- Rating Stars -->
                                     <span class="flex items-center">
                                         <span class="font-bold">Rating:</span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
                                         <sup>(25)</sup>
                                     </span>
                                     <!-- budges -->
@@ -360,7 +360,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card mx-2 h-80 w-[250px] whitespace-normal">
+                            <div class="card">
                                 <a href="#">
                                     <img class="item-img" src="img/dining.avif" alt="living-room" title="TANNISBY Living Room">
                                     <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
@@ -368,11 +368,11 @@
                                     <!-- Rating Stars -->
                                     <span class="flex items-center">
                                         <span class="font-bold">Rating:</span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
                                         <sup>(25)</sup>
                                     </span>
                                     <!-- budges -->
@@ -394,7 +394,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card mx-2 h-80 w-[250px] whitespace-normal">
+                            <div class="card">
                                 <a href="#">
                                     <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
                                     <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
@@ -402,11 +402,11 @@
                                     <!-- Rating Stars -->
                                     <span class="flex items-center">
                                         <span class="font-bold">Rating:</span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
                                         <sup>(25)</sup>
                                     </span>
                                     <!-- budges -->
@@ -428,7 +428,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card mx-2 h-80 w-[250px] whitespace-normal">
+                            <div class="card">
                                 <a href="#">
                                     <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
                                     <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
@@ -436,11 +436,11 @@
                                     <!-- Rating Stars -->
                                     <span class="flex items-center">
                                         <span class="font-bold">Rating:</span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
-                                        <span class="fa fa-star checked"></span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
                                         <sup>(25)</sup>
                                     </span>
                                     <!-- budges -->
@@ -486,6 +486,7 @@
             </div>
         </footer>
     </div>
-    <script src="item-2.js"></script>
+    <script type="module" src="./index.html"></script>
+    <script type="module" src="./item-2.js"></script>
 </body>
 </html>

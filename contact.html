@@ -31,8 +31,8 @@
             </div>
             <div class="flex items-center justify-end">
                 <div class="flex justify-end items-center">
-                    <a href="#" class="signbtn"><span>Log In</span></a>
-                    <a href="#" class="signbtn"><span>Sign UP</span></a>
+                    <a href="./login.html" class="signbtn"><span>Log In</span></a>
+                    <a href="./signup.html" class="signbtn"><span>Sign UP</span></a>
                 </div>
                 <div class="hidden justify-end">
                     <div class="mx-2">
@@ -63,7 +63,7 @@
             </div>
         </header>
         <!-- To Page Top -->
-        <div class="bg-[color:var(--secondary)] text-[color:var(--primary)] p-2 rounded-full fixed bottom-4 right-4 z-10">
+        <div class="gototop">
             <a href="#top"><span><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z"></path></svg></span></a>
         </div>
         <!-- navigation bar -->
@@ -81,25 +81,27 @@
             </div>
         </nav>
         <!-- side bar -->
-        <div class="side-bar hidden">
-            <div class="sidebar-close mb-16">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </div>
-            <!-- main links -->
-            <div class="flex flex-col items-end text-2xl font-bold mb-5">
-                <a class="hover:text-xl" href="#"><span>Products</span></a>
-                <a class="hover:text-xl" href="#"><span>Rooms</span></a>
-                <a class="hover:text-xl" href="#"><span>Brands</span></a>
-                <a class="hover:text-xl" href="#"><span>Custom Order</span></a>
-                <a class="hover:text-xl" href="#"><span>Offers</span></a>
-                <a class="hover:text-xl" href="#"><span>What's New</span></a>
-            </div>
-            <!-- additions links -->
-            <div class="flex flex-col items-end font-semibold text-lg">
-                <a class="hover:text-xl" href="#"><span>Contacts</span></a>
-                <a class="hover:text-xl" href="./about.html#about"><span>About Sky</span></a>
-                <a class="hover:text-xl" href="./about.html#policy"><span>Policy</span></a>
-                <a class="hover:text-xl" href="./about.html#stores"><span>Stores</span></a>
+        <div class="side-bar-container hidden">
+            <div class="side-bar hidden">
+                <div class="sidebar-close mb-16">
+                    <svg class="w-6 h-6" fill="no brne" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </div>
+                <!-- main links -->
+                <div class="flex flex-col items-end text-2xl font-bold mb-5">
+                    <a class="hover:text-xl" href="./search.html"><span>Products</span></a>
+                    <a class="hover:text-xl" href="./search.html"><span>Rooms</span></a>
+                    <a class="hover:text-xl" href="./about.html#brands"><span>Brands</span></a>
+                    <a class="hover:text-xl" href="#"><span>Custom Order</span></a>
+                    <a class="hover:text-xl" href="./search.html"><span>Offers</span></a>
+                    <a class="hover:text-xl" href="./search.html"><span>What's New</span></a>
+                </div>
+                <!-- additions links -->
+                <div class="flex flex-col items-end font-semibold text-lg">
+                    <a class="hover:text-xl" href="./contact.html"><span>Contacts</span></a>
+                    <a class="hover:text-xl" href="./about.html#about"><span>About Sky</span></a>
+                    <a class="hover:text-xl" href="./about.html#policy"><span>Policy</span></a>
+                    <a class="hover:text-xl" href="./about.html#stores"><span>Stores</span></a>
+                </div>
             </div>
         </div>
         <!-- search bar -->
@@ -108,8 +110,10 @@
             <div class="searchbar-content">
                 <div class="flex justify-center items-center mb-2">
                     <label class="mx-2 font-bold text-lg">Search</label>
-                    <input class="search-input" type="text" placeholder="Enter Model/Brand/Category Name">
-                    <span class="searchbtn"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></span>
+                    <input id="searchvalue" class="search-input" type="text" placeholder="Enter Model/Brand/Category Name">
+                    <div class="searchbtn">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
                 </div>
                 <div class="flex justify-center items-center pb-3">
                     <!-- Advance Search Bar -->
@@ -193,6 +197,6 @@
             </div>
         </footer>
     </div>
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 </html>

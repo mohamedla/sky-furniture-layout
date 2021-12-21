@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sky Furniture</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="relative">
@@ -31,8 +30,8 @@
             </div>
             <div class="flex items-center justify-end">
                 <div class="flex justify-end items-center">
-                    <a href="#" class="signbtn"><span>Log In</span></a>
-                    <a href="#" class="signbtn"><span>Sign UP</span></a>
+                    <a href="./login.html" class="signbtn"><span>Log In</span></a>
+                    <a href="./signup.html" class="signbtn"><span>Sign UP</span></a>
                 </div>
                 <div class="hidden justify-end">
                     <div class="mx-2">
@@ -63,7 +62,7 @@
             </div>
         </header>
         <!-- To Page Top -->
-        <div class="bg-[color:var(--secondary)] text-[color:var(--primary)] p-2 rounded-full fixed bottom-4 right-4 z-10">
+        <div class="gototop">
             <a href="#top"><span><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z"></path></svg></span></a>
         </div>
         <!-- navigation bar -->
@@ -81,25 +80,27 @@
             </div>
         </nav>
         <!-- side bar -->
-        <div class="side-bar hidden">
-            <div class="sidebar-close mb-16">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </div>
-            <!-- main links -->
-            <div class="flex flex-col items-end text-2xl font-bold mb-5">
-                <a class="hover:text-xl" href="#"><span>Products</span></a>
-                <a class="hover:text-xl" href="#"><span>Rooms</span></a>
-                <a class="hover:text-xl" href="#"><span>Brands</span></a>
-                <a class="hover:text-xl" href="#"><span>Custom Order</span></a>
-                <a class="hover:text-xl" href="#"><span>Offers</span></a>
-                <a class="hover:text-xl" href="#"><span>What's New</span></a>
-            </div>
-            <!-- additions links -->
-            <div class="flex flex-col items-end font-semibold text-lg">
-                <a class="hover:text-xl" href="./contact.html"><span>Contacts</span></a>
-                <a class="hover:text-xl" href="./about.html#about"><span>About Sky</span></a>
-                <a class="hover:text-xl" href="./about.html#policy"><span>Policy</span></a>
-                <a class="hover:text-xl" href="./about.html#stores"><span>Stores</span></a>
+        <div class="side-bar-container hidden">
+            <div class="side-bar hidden">
+                <div class="sidebar-close mb-16">
+                    <svg class="w-6 h-6" fill="no brne" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </div>
+                <!-- main links -->
+                <div class="flex flex-col items-end text-2xl font-bold mb-5">
+                    <a class="hover:text-xl" href="./search.html"><span>Products</span></a>
+                    <a class="hover:text-xl" href="./search.html"><span>Rooms</span></a>
+                    <a class="hover:text-xl" href="./about.html#brands"><span>Brands</span></a>
+                    <a class="hover:text-xl" href="#"><span>Custom Order</span></a>
+                    <a class="hover:text-xl" href="./search.html"><span>Offers</span></a>
+                    <a class="hover:text-xl" href="./search.html"><span>What's New</span></a>
+                </div>
+                <!-- additions links -->
+                <div class="flex flex-col items-end font-semibold text-lg">
+                    <a class="hover:text-xl" href="./contact.html"><span>Contacts</span></a>
+                    <a class="hover:text-xl" href="./about.html#about"><span>About Sky</span></a>
+                    <a class="hover:text-xl" href="./about.html#policy"><span>Policy</span></a>
+                    <a class="hover:text-xl" href="./about.html#stores"><span>Stores</span></a>
+                </div>
             </div>
         </div>
         <!-- search bar -->
@@ -108,8 +109,10 @@
             <div class="searchbar-content">
                 <div class="flex justify-center items-center mb-2">
                     <label class="mx-2 font-bold text-lg">Search</label>
-                    <input class="search-input" type="text" placeholder="Enter Model/Brand/Category Name">
-                    <span class="searchbtn"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></span>
+                    <input id="searchvalue" class="search-input" type="text" placeholder="Enter Model/Brand/Category Name">
+                    <div class="searchbtn">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
                 </div>
                 <div class="flex justify-center items-center pb-3">
                     <!-- Advance Search Bar -->
@@ -137,86 +140,220 @@
             <div>
                 <h2 class="main-title">Trending Now</h2>
                 <!-- cards -->
-                <div class="cards-wrapper">
-                    <div class="card">
-                        <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
-                        <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
-                        <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
-                        <span class="block"><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
-                        <!-- Rating Stars -->
-                        <span class="flex items-center">
-                            <span class="font-bold">Rating:</span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                        </span>
-                        <!-- budge -->
-                        <div class="price-budge">
-                            <span class="font-bold">989 &dollar;</span>
-                        </div>
+                <div class="relative  slider-container">
+                    <div class="scroll-right scroll-arrow right-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </div>
-                    <div class="card">
-                        <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
-                        <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
-                        <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
-                        <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
-                        <!-- Rating Stars -->
-                        <span class="flex items-center">
-                            <span class="font-bold">Rating:</span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                        </span>
-                        <!-- budge -->
-                        <div class="price-budge">
-                            <span class="font-bold">989 &dollar;</span>
-                        </div>
+                    <div class="scroll-left scroll-arrow left-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                     </div>
-                    <div class="card">
-                        <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
-                        <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
-                        <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
-                        <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
-                        <!-- Rating Stars -->
-                        <span class="flex items-center">
-                            <span class="font-bold">Rating:</span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                        </span>
-                        <!-- budge -->
-                        <div class="price-budge">
-                            <span class="font-bold">989 &dollar;</span>
+                    <div class="item-slider">
+                        <div class="absolute w-full h-full transition-all ease-linear duration-200">
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/balcony.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/bed-room.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/dining.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
-                        <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
-                        <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
-                        <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
-                        <!-- Rating Stars -->
-                        <span class="flex items-center">
-                            <span class="font-bold">Rating:</span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                        </span>
-                        <!-- budge -->
-                        <div class="price-budge">
-                            <span class="font-bold">989 &dollar;</span>
-                        </div>
-                    </div>
-                    <!-- Get More -->
-                    <div class="sm:col-span-2 lg:col-span-4 text-center my-2">
-                        <a class="get-more" href="#"><span class="text-[color:var(--primary)]">More >></span></a>
                     </div>
                 </div>
             </div>
@@ -224,86 +361,220 @@
             <div>
                 <h2 class="main-title">Our Most Popular</h2>
                 <!-- cards -->
-                <div class="cards-wrapper">
-                    <div class="card">
-                        <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
-                        <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
-                        <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
-                        <span class="block"><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
-                        <!-- Rating Stars -->
-                        <span class="flex items-center">
-                            <span class="font-bold">Rating:</span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                        </span>
-                        <!-- budge -->
-                        <div class="price-budge">
-                            <span class="font-bold">989 &dollar;</span>
-                        </div>
+                <div class="relative slider-container">
+                    <div class="scroll-right scroll-arrow right-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </div>
-                    <div class="card">
-                        <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
-                        <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
-                        <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
-                        <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
-                        <!-- Rating Stars -->
-                        <span class="flex items-center">
-                            <span class="font-bold">Rating:</span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                        </span>
-                        <!-- budge -->
-                        <div class="price-budge">
-                            <span class="font-bold">989 &dollar;</span>
-                        </div>
+                    <div class="scroll-left scroll-arrow left-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                     </div>
-                    <div class="card">
-                        <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
-                        <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
-                        <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
-                        <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
-                        <!-- Rating Stars -->
-                        <span class="flex items-center">
-                            <span class="font-bold">Rating:</span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                        </span>
-                        <!-- budge -->
-                        <div class="price-budge">
-                            <span class="font-bold">989 &dollar;</span>
+                    <div class="item-slider">
+                        <div class="absolute w-full h-full transition-all ease-linear duration-200">
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/balcony.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/bed-room.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/dining.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
-                        <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
-                        <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
-                        <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
-                        <!-- Rating Stars -->
-                        <span class="flex items-center">
-                            <span class="font-bold">Rating:</span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                        </span>
-                        <!-- budge -->
-                        <div class="price-budge">
-                            <span class="font-bold">989 &dollar;</span>
-                        </div>
-                    </div>
-                    <!-- Get More -->
-                    <div class="sm:col-span-2 lg:col-span-4 text-center my-2">
-                        <a class="get-more" href="#"><span class="text-[color:var(--primary)]">More >></span></a>
                     </div>
                 </div>
             </div>
@@ -311,86 +582,220 @@
             <div>
                 <h2 class="main-title">Recommendations</h2>
                 <!-- cards -->
-                <div class="cards-wrapper">
-                    <div class="card">
-                        <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
-                        <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
-                        <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
-                        <span class="block"><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
-                        <!-- Rating Stars -->
-                        <span class="flex items-center">
-                            <span class="font-bold">Rating:</span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                        </span>
-                        <!-- budge -->
-                        <div class="price-budge">
-                            <span class="font-bold">989 &dollar;</span>
-                        </div>
+                <div class="relative  slider-container">
+                    <div class="scroll-right scroll-arrow right-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </div>
-                    <div class="card">
-                        <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
-                        <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
-                        <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
-                        <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
-                        <!-- Rating Stars -->
-                        <span class="flex items-center">
-                            <span class="font-bold">Rating:</span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                        </span>
-                        <!-- budge -->
-                        <div class="price-budge">
-                            <span class="font-bold">989 &dollar;</span>
-                        </div>
+                    <div class="scroll-left scroll-arrow left-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                     </div>
-                    <div class="card">
-                        <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
-                        <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
-                        <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
-                        <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
-                        <!-- Rating Stars -->
-                        <span class="flex items-center">
-                            <span class="font-bold">Rating:</span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                        </span>
-                        <!-- budge -->
-                        <div class="price-budge">
-                            <span class="font-bold">989 &dollar;</span>
+                    <div class="item-slider">
+                        <div class="absolute w-full h-full transition-all ease-linear duration-200">
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/balcony.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/bed-room.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/dining.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <a href="./item-2.html">
+                                    <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
+                                    <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
+                                    <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
+                                    <!-- Rating Stars -->
+                                    <span class="flex items-center">
+                                        <span class="font-bold">Rating:</span> &ThickSpace;
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5 checked" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg> &ThickSpace;
+                                        <sup>(25)</sup>
+                                    </span>
+                                    <!-- budges -->
+                                    <!-- price -->
+                                    <div class="price-budge">
+                                        <span class="font-bold">989 &dollar;</span>
+                                    </div>
+                                </a>
+                                <!-- add to favourite -->
+                                <div class="favourit-budge">
+                                    <div class="addtofavourite favourite-bgcolor p-1 rounded-full">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <!-- add to cart -->
+                                <div class="addtocart-position">
+                                    <div class="addtocart cart-bgcolor addtocart">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <img class="item-img" src="img/living-room.avif" alt="living-room" title="TANNISBY Living Room">
-                        <span class="block text-lg"><span class="font-bold">Model:</span> <span class="capitalize">TANNISBY living room </span></span>
-                        <span class="block"><span class="font-bold">Brand:</span> <span class="uppercase">ikea</span></span>
-                        <span><span class="font-bold">Description:</span> <span>3 seat cushion, 3 wing chairs and 80*40 table</span></span>
-                        <!-- Rating Stars -->
-                        <span class="flex items-center">
-                            <span class="font-bold">Rating:</span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                            <span class="fa fa-star checked"></span> &ThickSpace;
-                        </span>
-                        <!-- budge -->
-                        <div class="price-budge">
-                            <span class="font-bold">989 &dollar;</span>
-                        </div>
-                    </div>
-                    <!-- Get More -->
-                    <div class="sm:col-span-2 lg:col-span-4 text-center my-2">
-                        <a class="get-more" href="#"><span class="text-[color:var(--primary)]">More >></span></a>
                     </div>
                 </div>
             </div>
@@ -414,6 +819,6 @@
             </div>
         </footer>
     </div>
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 </html>
