@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --primary:#F4E7D3;
+    --secondary: #1F4E5F;
+}
+/* Loade Style */
+#loader-wrapper #loader{
+    @apply relative block left-[50%] top-[50%] w-[150px] h-[150px] mt-[-75px] ml-[-75px] border-4 border-transparent border-t-[#3498db] rounded-full animate-spin z-[255]
+
+    before:absolute before:top-[5px] before:left-[5px] before:right-[5px] before:bottom-[5px] before:border-4 before:border-transparent before:border-t-[#e74c3c] before:rounded-full before:animate-spin 
+
+    after:absolute after:top-[15px] after:left-[15px] after:right-[15px] after:bottom-[15px] after:border-4 after:border-transparent after:border-t-[#f9c922] after:rounded-full after:animate-spin;
+}
+.loader-section{
+    @apply fixed top-0 w-[51%] h-screen bg-[color:var(--secondary)] z-[250];
+}
+.loaded #loader-wrapper .loader-section.section-left{
+    @apply translate-x-[-100%] transition-all ease-out duration-500 delay-500;
+}
+.loaded #loader-wrapper .loader-section.section-right{
+    @apply translate-x-[100%] transition-all ease-out duration-500 delay-500;
+}
+.loaded #loader{
+    @apply opacity-0 transition-all ease-out duration-500;
+}
+.loaded #loader-wrapper{
+    @apply invisible translate-y-[-100%] transition-all ease-out duration-500 delay-1000;
+}
+/* end */
+.title-div{
+    @apply hidden md:block md:col-span-2 text-center text-4xl font-title font-extrabold;
+}
+header{
+    @apply grid grid-cols-2 md:grid-cols-4 justify-between items-center box-border px-5 py-2 border-b-4 border-white col-span-4;
+}
+body{
+    @apply font-body bg-[color:var(--primary)] text-[color:var(--secondary)] transition ease-linear duration-500 min-h-screen;
+}
+nav{
+    @apply border-b-4 col-span-4 border-white flex justify-center p-5 h-fit lg:border-b-0 lg:border-r-4 lg:col-span-1 lg:h-full;
+}
+nav .container{
+    @apply flex flex-wrap justify-center lg:flex-nowrap lg:flex-col lg:justify-start;
+}
+nav .container .maindiv{
+    @apply border-b-2 pb-2 border-[color:var(--secondary)] m-5 font-bold box-border h-fit lg:m-2;
+}
+nav .container .maindiv .trig-menu{
+    @apply flex items-center justify-between hover:cursor-pointer;
+}
+nav .container .maindiv .trig-menu div{
+    @apply flex items-center text-lg;
+}
+nav .container .maindiv .options div{
+    @apply box-border pt-2 text-sm flex flex-col items-center justify-center px-5;
+}
+nav .container .maindiv .options div a{
+    @apply flex items-center;
+}
+.transition-200{
+    @apply transition-all ease-linear duration-200;
+}
+.info-card{
+    @apply flex justify-around items-center border-2 border-[color:var(--secondary)] rounded-lg font-bold m-2 lg:m-5 w-[230px] p-2;
+}
+.info-card svg.active{
+    @apply w-12 h-12 text-green-600;
+}
+.info-card svg{
+    @apply w-12 h-12;
+}
+.info-card div{
+    @apply flex flex-col m-2 items-center;
+}
