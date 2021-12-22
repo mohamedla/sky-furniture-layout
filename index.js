@@ -45,10 +45,10 @@
 // change mode
 const chageMode = document.querySelector('.mode'),
     cssRoot = document.querySelector(':root');
+
 var isdark = false;
 
 chageMode.addEventListener('click',()=>{
-    // var primaryColor = getComputedStyle(cssRoot).getPropertyValue('--primary');
     if (isdark) {
         cssRoot.style.setProperty('--primary', '#F4E7D3');
         cssRoot.style.setProperty('--secondary', '#1F4E5F');

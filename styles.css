@@ -444,6 +444,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-shadow-colored: 0 0 #0000;
 }
 
+.container{
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
+
 .fixed{
   position: fixed;
 }
@@ -512,16 +546,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: 0.5rem;
 }
 
-.m-5{
-  margin: 1.25rem;
-}
-
 .m-1{
   margin: 0.25rem;
 }
 
 .m-0{
   margin: 0px;
+}
+
+.m-5{
+  margin: 1.25rem;
 }
 
 .mx-2{
@@ -547,6 +581,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mx-5{
   margin-left: 1.25rem;
   margin-right: 1.25rem;
+}
+
+.my-3{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .my-6{
@@ -622,28 +661,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1.5rem;
 }
 
-.h-full{
-  height: 100%;
-}
-
 .h-5{
   height: 1.25rem;
-}
-
-.h-\[22rem\]{
-  height: 22rem;
-}
-
-.h-32{
-  height: 8rem;
-}
-
-.h-\[23rem\]{
-  height: 23rem;
-}
-
-.h-80{
-  height: 20rem;
 }
 
 .h-fit{
@@ -652,28 +671,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: fit-content;
 }
 
-.h-16{
-  height: 4rem;
+.h-full{
+  height: 100%;
 }
 
-.h-72{
-  height: 18rem;
+.h-32{
+  height: 8rem;
 }
 
-.h-60{
-  height: 15rem;
-}
-
-.h-52{
-  height: 13rem;
-}
-
-.h-40{
-  height: 10rem;
-}
-
-.h-24{
-  height: 6rem;
+.h-28{
+  height: 7rem;
 }
 
 .min-h-\[80px\]{
@@ -696,6 +703,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1.5rem;
 }
 
+.w-52{
+  width: 13rem;
+}
+
+.w-5{
+  width: 1.25rem;
+}
+
 .w-fit{
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -706,42 +721,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
-.w-5{
-  width: 1.25rem;
-}
-
-.w-\[250px\]{
-  width: 250px;
+.w-\[75\%\]{
+  width: 75%;
 }
 
 .w-\[90\%\]{
   width: 90%;
 }
 
-.w-16{
-  width: 4rem;
-}
-
-.w-72{
-  width: 18rem;
-}
-
-.w-80{
-  width: 20rem;
-}
-
-.w-60{
-  width: 15rem;
-}
-
-.w-52{
-  width: 13rem;
+.w-\[23\%\]{
+  width: 23%;
 }
 
 .max-w-fit{
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
+}
+
+.max-w-\[200px\]{
+  max-width: 200px;
 }
 
 .rotate-180{
@@ -768,6 +767,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-auto-columns: max-content;
 }
 
+.grid-flow-row{
+  grid-auto-flow: row;
+}
+
 .grid-flow-col{
   grid-auto-flow: column;
 }
@@ -779,6 +782,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-cols-2{
@@ -799,6 +806,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex-wrap{
   flex-wrap: wrap;
+}
+
+.items-start{
+  align-items: flex-start;
 }
 
 .items-end{
@@ -833,28 +844,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 0.5rem;
 }
 
-.overflow-x-auto{
-  overflow-x: auto;
-}
-
 .overflow-y-auto{
   overflow-y: auto;
 }
 
-.overflow-y-hidden{
-  overflow-y: hidden;
-}
-
-.whitespace-normal{
-  white-space: normal;
-}
-
-.whitespace-nowrap{
-  white-space: nowrap;
-}
-
 .rounded{
   border-radius: 0.25rem;
+}
+
+.rounded-lg{
+  border-radius: 0.5rem;
 }
 
 .rounded-full{
@@ -863,10 +862,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .rounded-md{
   border-radius: 0.375rem;
-}
-
-.rounded-lg{
-  border-radius: 0.5rem;
 }
 
 .rounded-t{
@@ -908,6 +903,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border-\[color\:var\(--primary\)\]{
   border-color: var(--primary);
+}
+
+.border-b-white{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .bg-white{
@@ -998,6 +998,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.75rem;
 }
 
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .pb-3{
   padding-bottom: 0.75rem;
 }
@@ -1024,6 +1029,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pl-2{
   padding-left: 0.5rem;
+}
+
+.pb-4{
+  padding-bottom: 1rem;
+}
+
+.pb-5{
+  padding-bottom: 1.25rem;
 }
 
 .text-center{
@@ -1067,12 +1080,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 600;
 }
 
-.font-medium{
-  font-weight: 500;
-}
-
 .font-extrabold{
   font-weight: 800;
+}
+
+.font-medium{
+  font-weight: 500;
 }
 
 .uppercase{
@@ -1113,6 +1126,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .transition-all{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-150{
   transition-duration: 150ms;
 }
 
@@ -1170,17 +1187,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .item-img{
   margin-bottom: 0.5rem;
-  height: 8rem;
+  height: 12rem;
   width: 100%;
   border-radius: 0.25rem;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-@media (min-width: 640px){
-  .item-img{
-    height: 12rem;
-  }
 }
 
 .price-budge{
@@ -1663,9 +1674,54 @@ main .about-wrapper article{
 .input-field{
   border-radius: 0.375rem;
   background-color: var(--secondary);
-  padding: 0.75rem;
-  text-align: center;
+  padding: 0.5rem;
   color: var(--primary);
+}
+
+.trans-line-150{
+  transition-property: all;
+  transition-duration: 150ms;
+  transition-timing-function: linear;
+}
+
+.input-field-disabled{
+  border-radius: 0.375rem;
+  border-color: var(--secondary);
+  padding: 0.5rem;
+}
+
+.profileinput-section{
+  margin: 0.25rem;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.5rem;
+}
+
+.profileinput-section label{
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+@media (min-width: 640px){
+  .profileinput-section label{
+    margin-left: 1.25rem;
+  }
+}
+
+.profileinput-container, .profileinput-container-addDetail{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+svg:hover{
+  cursor: pointer;
 }
 
 .submit-btn{
@@ -1767,7 +1823,7 @@ main .about-wrapper article{
 
 .scroll-arrow{
   position: absolute;
-  top: calc(50% - 50px);
+  top: calc(50% - 15px);
   z-index: 30;
   border-radius: 9999px;
   background-color: var(--secondary);
@@ -1834,6 +1890,134 @@ main .about-wrapper article{
   width: 100vw;
 }
 
+/* file input */
+
+input[type='file']{
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-color: var(--secondary);
+}
+
+input[type='file']::-webkit-file-upload-button{
+  visibility: hidden;
+}
+
+input[type='file']::before {
+  content: 'Select Files';
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  -webkit-user-select: none;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  display: inline-block;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 0.375rem;
+  border-width: 2px;
+  border-color: var(--secondary);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-weight: 700;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+input[type='file']:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+input[type='submit']{
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-color: var(--secondary);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-weight: 700;
+  transition-property: all;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+}
+
+input[type='submit']:hover{
+  cursor: pointer;
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.removefromfav{
+  margin: 0.25rem;
+  border-radius: 0.75rem;
+  border-width: 2px;
+  border-color: var(--secondary);
+  padding: 0.25rem;
+  font-weight: 700;
+  transition-property: all;
+  transition-duration: 150ms;
+  transition-timing-function: linear;
+}
+
+.removefromfav:hover{
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.item{
+  z-index: 0;
+  margin: 0.25rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  box-sizing: border-box;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  width: 300px;
+  white-space: normal;
+  border-radius: 0.25rem;
+  border-width: 2px;
+  border-color: var(--secondary);
+  padding: 0.25rem;
+}
+
+@media (min-width: 768px){
+  .item{
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+.item-sub{
+  z-index: 0;
+  margin: 0.25rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  box-sizing: border-box;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  white-space: normal;
+  border-radius: 0.25rem;
+  border-width: 2px;
+  border-color: var(--secondary);
+  padding: 0.25rem;
+}
+
+@media (min-width: 768px){
+  .item-sub{
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
 .hover\:h-8:hover{
   height: 2rem;
 }
@@ -1869,6 +2053,11 @@ main .about-wrapper article{
 }
 
 @media (min-width: 640px){
+  .sm\:mx-10{
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
   .sm\:w-\[50\%\]{
     width: 50%;
   }
@@ -1894,6 +2083,10 @@ main .about-wrapper article{
 
   .md\:ml-10{
     margin-left: 2.5rem;
+  }
+
+  .md\:ml-20{
+    margin-left: 5rem;
   }
 
   .md\:grid{
