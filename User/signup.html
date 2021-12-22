@@ -19,9 +19,15 @@
                 </div>
                 <form action="#" method="get">
                     <div class="text-center font-extrabold font-title text-3xl uppercase">
-                        <span>Log in</span>
+                        <span>Sign up</span>
                     </div>
                     <div class="grid grid-cols-1 gap-5 box-border p-10 items-center justify-center font-bold capitalize text-lg">
+                        <div class="lg:grid gap-2 grid-cols-2 grid-rows-2">
+                            <label class="" for="fname">First name</label>
+                            <label class="" for="lname">second name</label>
+                            <input class="apperance-none input-field" type="text" name="fname" id="fname">
+                            <input class="apperance-none input-field" type="text" name="lname" id="lname">
+                        </div>
                         <label class="w-fit" for="email">Email</label>
                         <input class="apperance-none input-field" type="text" name="email" id="email">
                         <label class="w-fit" for="password">password</label>
@@ -33,15 +39,14 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <input type="submit" class="submit-btn" value="Login">
+                            <input type="submit" class="submit-btn" value="Signup">
                         </div>
-                        <span class="text-base text-center font-medium">don't have an accont? <a href="./signup.html" class="underline"><span>register now</span></a></span>
-                        <span class="text-base text-center font-medium">forget your password? <a href="#" class="underline"><span>reset password</span></a></span>
+                        <span class="text-base text-center font-medium">do have an accont? <a href="./login.html" class="underline"><span>login now</span></a></span>
                     </div>
                 </form>
             </div>
         </main>
     </div>
-    <script type="module" src="./signing.js"></script>
+    <script type="module" src="./js/signing.js"></script>
 </body>
 </html>
