@@ -502,6 +502,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: 0.5rem;
 }
 
+.m-10{
+  margin: 2.5rem;
+}
+
 .mx-2{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -515,6 +519,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mx-5{
   margin-left: 1.25rem;
   margin-right: 1.25rem;
+}
+
+.mb-5{
+  margin-bottom: 1.25rem;
 }
 
 .mb-2{
@@ -584,6 +592,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -602,6 +618,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-center{
   justify-content: center;
+}
+
+.gap-1{
+  gap: 0.25rem;
+}
+
+.gap-2{
+  gap: 0.5rem;
 }
 
 .rounded-full{
@@ -1097,6 +1121,88 @@ table td{
 
 /* end */
 
+/* input Styles */
+
+.input-field{
+  border-radius: 0.375rem;
+  background-color: var(--secondary);
+  padding: 0.5rem;
+  color: var(--primary);
+}
+
+input[type='file']{
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-color: var(--secondary);
+}
+
+input[type='file']::-webkit-file-upload-button{
+  visibility: hidden;
+}
+
+input[type='file']::before {
+  content: 'Select Files';
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  -webkit-user-select: none;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  display: inline-block;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 0.375rem;
+  border-width: 2px;
+  border-color: var(--secondary);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-weight: 700;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+input[type='file']:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+input[type='submit']{
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-color: var(--secondary);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-weight: 700;
+  transition-property: all;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+}
+
+input[type='submit']:hover{
+  cursor: pointer;
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+label{
+  font-weight: 700;
+}
+
+.extraImg, .extracolor, .extraItem{
+  margin-bottom: 1.25rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+/* end */
+
 .hover\:bg-\[color\:var\(--secondary\)\]:hover{
   background-color: var(--secondary);
 }
@@ -1130,5 +1236,9 @@ table td{
 
   .lg\:min-h-screen{
     min-height: 100vh;
+  }
+
+  .lg\:w-\[760px\]{
+    width: 760px;
   }
 }
