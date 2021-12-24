@@ -54,7 +54,7 @@
                 </div>
 
                 <!-- Employees -->
-                <div class="maindiv">
+                <div class="maindiv selected">
                     <div class="trig-menu">
                         <div>
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path></svg>
@@ -135,7 +135,7 @@
                 </div>
 
                 <!-- Product -->
-                <div class="maindiv selected">
+                <div class="maindiv">
                     <div class="trig-menu">
                         <div>
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"></path><path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -206,69 +206,47 @@
         </nav>
         <!-- main content -->
         <main>
-            <!-- wraper -->
-            <div class="w-full m-2 flex flex-col">
-                <!-- search bar -->
-                <div>
-                    <!-- Stander search bar -->
-                    <div>
-                        <form class="sm:flex justify-center items-center m-2 p-2" action="#">
-                            <div class="flex justify-center items-center mb-2">
-                                <label class="mx-2 font-bold text-lg">Search</label>
-                                <input id="searchvalue" class="appearance-none bg-[color:var(--secondary)] rounded-full text-[color:var(--primary)] p-2" type="text" placeholder="Enter Value">
-                                <div class="mx-2">
-                                    <button type="submit" class="border border-[color:var(--secondary)] hover:bg-[color:var(--secondary)] rounded-full hover:text-[color:var(--primary)] p-1">
-                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="flex justify-center items-center pb-3">
-                                <!-- Advance Search Bar -->
-                                <select class="appearance-none bg-[color:var(--secondary)] hover:bg-[color:var(--primary)] rounded-full text-center font-bold hover:text-[color:var(--secondary)] text-[color:var(--primary)] p-2" name="" id="" aria-placeholder="Choose Catagory" required>
-                                    <option value="0" disabled selected>Select a Search Type</option>
-                                        <option value="">ID</option>
-                                        <option value="">Model</option>
-                                        <option value="">Brand</option>
-                                </select>
-                            </div>
-                        </form>
+           <!-- wrapper -->
+           <div>
+            <h1 class="text-xl font-extrabold ml-5 my-5">Employee (Sara Aloha)</h1>
+            <div class="">
+                <div class="objectinput-section">
+                    <label for="name"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg> Name</label>
+                    <div class="objectinput-container">
+                        <input class="input input-field-disabled input-field-a trans-line-150" disabled value="Sara Aloha"  type="text" name="name" >
+                        <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                        <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
                     </div>
                 </div>
-                <!-- Data Table -->
-                <table>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>ID</th>
-                            <th>Model</th>
-                            <th>Brand</th>
-                            <th>Price</th>
-                            <th>Catogry</th>
-                            <th>Rating</th>
-                            <th>Discount</th>
-                            <th>Edit</th>
-                            <th class="border-r-2 border-[color:var(--secondary)]">Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>e45rf6</td>
-                            <td>Italian Bosshkash Chair</td>
-                            <td>Chair</td>
-                            <td>989&dollar;</td>
-                            <td>Chair</td>
-                            <td>4.2<sup>(30)</sup></td>
-                            <td>5%</td>
-                            <td class="center-vertical">
-                                <a href="./item.html">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </td>
-                            <td class="removeBtn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path></svg></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="objectinput-section">
+                    <label for="email"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg> Email</label>
+                    <div class="objectinput-container">
+                        <input class="input input-field-disabled input-field-a trans-line-150" disabled value="sara_store@sky.com"  type="text" name="email">
+                        <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                        <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    </div>
+                </div>
+                <div class="objectinput-section">
+                    <label for="password"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> password</label>
+                    <div class="objectinput-container">
+                        <input class="input input-field-disabled input-field-a trans-line-150" disabled value="Johan-allan@skyfurniture.com"  type="password" name="password">
+                        <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                        <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    </div>
+                </div>
+                <div class="objectinput-section">
+                    <label for="role"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path><path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path></svg> Role</label>
+                    <div class="objectinput-container">
+                        <select class="input appearance-none input-field-disabled input-field-a" name="role" disabled aria-placeholder="Choose Catagory">
+                            <option value="" selected>Store Keeper</option>
+                            <option value="">Delivary</option>
+                            <option value="">Reviewer</option>
+                            <option value="">Service</option>
+                        </select>
+                        <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                        <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -282,5 +260,6 @@
     </div>
 
     <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/object.js"></script>
 </body>
 </html>

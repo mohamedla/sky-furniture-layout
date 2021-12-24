@@ -89,7 +89,7 @@
                 </div>
 
                 <!-- Brand -->
-                <div class="maindiv">
+                <div class="maindiv selected">
                     <div class="trig-menu">
                         <div>
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
@@ -135,7 +135,7 @@
                 </div>
 
                 <!-- Product -->
-                <div class="maindiv selected">
+                <div class="maindiv">
                     <div class="trig-menu">
                         <div>
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"></path><path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -206,69 +206,18 @@
         </nav>
         <!-- main content -->
         <main>
-            <!-- wraper -->
-            <div class="w-full m-2 flex flex-col">
-                <!-- search bar -->
-                <div>
-                    <!-- Stander search bar -->
-                    <div>
-                        <form class="sm:flex justify-center items-center m-2 p-2" action="#">
-                            <div class="flex justify-center items-center mb-2">
-                                <label class="mx-2 font-bold text-lg">Search</label>
-                                <input id="searchvalue" class="appearance-none bg-[color:var(--secondary)] rounded-full text-[color:var(--primary)] p-2" type="text" placeholder="Enter Value">
-                                <div class="mx-2">
-                                    <button type="submit" class="border border-[color:var(--secondary)] hover:bg-[color:var(--secondary)] rounded-full hover:text-[color:var(--primary)] p-1">
-                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="flex justify-center items-center pb-3">
-                                <!-- Advance Search Bar -->
-                                <select class="appearance-none bg-[color:var(--secondary)] hover:bg-[color:var(--primary)] rounded-full text-center font-bold hover:text-[color:var(--secondary)] text-[color:var(--primary)] p-2" name="" id="" aria-placeholder="Choose Catagory" required>
-                                    <option value="0" disabled selected>Select a Search Type</option>
-                                        <option value="">ID</option>
-                                        <option value="">Model</option>
-                                        <option value="">Brand</option>
-                                </select>
-                            </div>
-                        </form>
+           <!-- wrapper -->
+           <div>
+            <h1 class="text-xl font-extrabold ml-5 my-5">Brand (Ikea)</h1>
+            <div class="">
+                <div class="objectinput-section">
+                    <label for="name">Name</label>
+                    <div class="objectinput-container">
+                        <input class="input input-field-disabled input-field-a trans-line-150" disabled value="Ikea"  type="text" name="name" >
+                        <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                        <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
                     </div>
                 </div>
-                <!-- Data Table -->
-                <table>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>ID</th>
-                            <th>Model</th>
-                            <th>Brand</th>
-                            <th>Price</th>
-                            <th>Catogry</th>
-                            <th>Rating</th>
-                            <th>Discount</th>
-                            <th>Edit</th>
-                            <th class="border-r-2 border-[color:var(--secondary)]">Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>e45rf6</td>
-                            <td>Italian Bosshkash Chair</td>
-                            <td>Chair</td>
-                            <td>989&dollar;</td>
-                            <td>Chair</td>
-                            <td>4.2<sup>(30)</sup></td>
-                            <td>5%</td>
-                            <td class="center-vertical">
-                                <a href="./item.html">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </td>
-                            <td class="removeBtn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path></svg></td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </main>
 
@@ -282,5 +231,6 @@
     </div>
 
     <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/object.js"></script>
 </body>
 </html>
