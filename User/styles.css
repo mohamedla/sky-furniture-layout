@@ -578,19 +578,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1.25rem;
 }
 
-.mx-5{
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-}
-
 .my-3{
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
 
-.my-6{
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+.mx-5{
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
 }
 
 .mb-16{
@@ -605,16 +600,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
-.mt-5{
-  margin-top: 1.25rem;
-}
-
 .ml-5{
   margin-left: 1.25rem;
 }
 
-.mb-4{
-  margin-bottom: 1rem;
+.mt-5{
+  margin-top: 1.25rem;
 }
 
 .ml-2{
@@ -653,12 +644,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100vh;
 }
 
-.h-8{
-  height: 2rem;
-}
-
 .h-6{
   height: 1.5rem;
+}
+
+.h-8{
+  height: 2rem;
 }
 
 .h-5{
@@ -687,20 +678,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100vw;
 }
 
+.w-6{
+  width: 1.5rem;
+}
+
 .w-28{
   width: 7rem;
 }
 
 .w-8{
   width: 2rem;
-}
-
-.w-6{
-  width: 1.5rem;
-}
-
-.w-52{
-  width: 13rem;
 }
 
 .w-5{
@@ -844,12 +831,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow-y: auto;
 }
 
-.rounded{
-  border-radius: 0.25rem;
-}
-
 .rounded-lg{
   border-radius: 0.5rem;
+}
+
+.rounded{
+  border-radius: 0.25rem;
 }
 
 .rounded-md{
@@ -957,10 +944,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0.5rem;
 }
 
-.p-3{
-  padding: 0.75rem;
-}
-
 .p-5{
   padding: 1.25rem;
 }
@@ -1003,16 +986,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.75rem;
 }
 
-.pl-10{
-  padding-left: 2.5rem;
-}
-
 .pl-5{
   padding-left: 1.25rem;
 }
 
 .pt-5{
   padding-top: 1.25rem;
+}
+
+.pl-10{
+  padding-left: 2.5rem;
 }
 
 .pb-10{
@@ -1053,14 +1036,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-base{
@@ -1103,10 +1086,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .underline{
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-}
-
-.underline-offset-4{
-  text-underline-offset: 4px;
 }
 
 .underline-offset-1{
@@ -1224,7 +1203,8 @@ body{
   z-index: 250;
   height: 100vh;
   width: 51%;
-  background-color: var(--secondary);
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 78 95 / var(--tw-bg-opacity));
 }
 
 .loaded #loader-wrapper .loader-section.section-left{
@@ -1674,13 +1654,29 @@ footer div.dev span{
 
 /* Main page */
 
-/* index main content */
-
 main{
   margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-main h2{
+/* index main content */
+
+main .home-wrpper{
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 0.5rem;
+  border-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+main .home-wrpper h2{
   margin-bottom: 0.5rem;
   margin-top: 1.25rem;
   font-size: 1.875rem;
@@ -1689,11 +1685,11 @@ main h2{
   color: var(--secondary);
 }
 
-main > div .slider-container{
+main .home-wrpper .slider-container{
   position: relative;
 }
 
-main .slider-container .scroll-arrow{
+main .home-wrpper .slider-container .scroll-arrow{
   position: absolute;
   top: calc(50% - 15px);
   z-index: 30;
@@ -1704,20 +1700,20 @@ main .slider-container .scroll-arrow{
   opacity: 0.8;
 }
 
-main .slider-container .scroll-arrow svg{
+main .home-wrpper .slider-container .scroll-arrow svg{
   height: 2rem;
   width: 2rem;
 }
 
-main .slider-container .scroll-arrow.right{
+main .home-wrpper .slider-container .scroll-arrow.right{
   right: 10px
 }
 
-main .slider-container .scroll-arrow.left{
+main .home-wrpper .slider-container .scroll-arrow.left{
   left: 10px
 }
 
-main .slider-container .slider{
+main .home-wrpper .slider-container .slider{
   position: relative;
   box-sizing: border-box;
   height: 340px;
@@ -1731,7 +1727,7 @@ main .slider-container .slider{
   padding: 0.5rem;
 }
 
-main .slider-container .slider > div{
+main .home-wrpper .slider-container .slider > div{
   position: absolute;
   display: flex;
   height: 100%;
@@ -1744,7 +1740,7 @@ main .slider-container .slider > div{
   transition-timing-function: linear;
 }
 
-main .slider .card{
+main .home-wrpper .slider .card{
   position: relative;
   z-index: 0;
   margin-top: 1.25rem;
@@ -1761,7 +1757,7 @@ main .slider .card{
   padding: 0.25rem;
 }
 
-main .slider .card .item-img{
+main .home-wrpper .slider .card .item-img{
   margin-bottom: 0.5rem;
   height: 12rem;
   width: 100%;
@@ -1770,24 +1766,24 @@ main .slider .card .item-img{
      object-fit: cover;
 }
 
-main .card .rating{
+.home-wrpper .card .rating{
   display: flex;
   align-items: center;
 }
 
-main .card .rating svg{
+.home-wrpper .card .rating svg{
   height: 1.25rem;
   width: 1.25rem;
 }
 
-main .card .rating i{
+.home-wrpper .card .rating i{
   display: flex;
   -webkit-clip-path: inset(0 10% 0 0);
           clip-path: inset(0 10% 0 0);
   color: orange;
 }
 
-main .card .price-budge{
+.home-wrpper .card .price-budge{
   position: absolute;
   top: 0.75rem;
   left: 0.75rem;
@@ -1797,11 +1793,11 @@ main .card .price-budge{
   opacity: 0.8;
 }
 
-main .card .price-budge span{
+.home-wrpper .card .price-budge span{
   font-weight: 900;
 }
 
-main .card .favourit-budge{
+.home-wrpper .card .favourit-budge{
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
@@ -1810,27 +1806,27 @@ main .card .favourit-budge{
   opacity: 0.8;
 }
 
-main .card .favourit-budge > div{
+.home-wrpper .card .favourit-budge > div{
   border-radius: 9999px;
   background-color: var(--secondary);
   padding: 0.25rem;
 }
 
-main .card .favourit-budge > div:hover{
+.home-wrpper .card .favourit-budge > div:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
-main .card .favourit-budge > div.added{
+.home-wrpper .card .favourit-budge > div.added{
   background-color: red;
 }
 
-main .card .favourit-budge svg{
+.home-wrpper .card .favourit-budge svg{
   height: 1.5rem;
   width: 1.5rem;
 }
 
-main .card .addtocart{
+.home-wrpper .card .addtocart{
   position: absolute;
   bottom: 0.25rem;
   right: 0.25rem;
@@ -1843,12 +1839,12 @@ main .card .addtocart{
   padding: 0.25rem;
 }
 
-main .card .addtocart:hover{
+.home-wrpper .card .addtocart:hover{
   background-color: var(--secondary);
   color: var(--primary);
 }
 
-main .card .addtocart.added{
+.home-wrpper .card .addtocart.added{
   color: var(--primary);
   background-color: var(--secondary);
 }
@@ -1856,6 +1852,181 @@ main .card .addtocart.added{
 /* end */
 
 /* End of Main Page styles */
+
+/* About Page Styles */
+
+main .about-wrapper{
+  border-radius: 0.25rem;
+  border-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+main .about-wrapper > div{
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  padding: 0.75rem;
+}
+
+main .about-wrapper h1{
+  font-family: Nunito;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+main .about-wrapper h3{
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+main .about-wrapper article{
+  padding-left: 2.5rem;
+  font-size: 1.125rem;
+  line-height: 35px;
+}
+
+main .about-wrapper .brands{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main .about-wrapper .brands div{
+  margin: 0.5rem;
+  width: 13rem;
+}
+
+main .about-wrapper article svg{
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+main .about-wrapper article a{
+  display: flex;
+  align-items: center;
+}
+
+/* End of About Page Styles */
+
+/* Contact Page Styles */
+
+main .contact-wrapper{
+  border-radius: 0.25rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+main .contact-wrapper > div{
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  margin-top: 1.25rem;
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+main .contact-wrapper h3{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+main .contact-wrapper p{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 768px){
+  main .contact-wrapper p{
+    margin-left: 8rem;
+  }
+}
+
+main .contact-wrapper p{
+  line-height: 35px
+}
+
+main .contact-wrapper p span{
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+main .contact-wrapper form{
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-wrapper form div{
+  margin-bottom: 1.25rem;
+  display: grid;
+  justify-content: space-around;
+  gap: 1.25rem;
+}
+
+.contact-wrapper form label{
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: Nunito;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.contact-wrapper form input, .contact-wrapper form textarea{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0.5rem;
+  background-color: var(--secondary);
+  padding: 0.75rem;
+  color: var(--primary);
+}
+
+.contact-wrapper form input[type="submit"]{
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-width: 2px;
+  border-color: var(--secondary);
+  background-color: var(--primary);
+  color: var(--secondary);
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+}
+
+.contact-wrapper form input[type="submit"]:hover{
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+/* End of Contact Page Styles */
 
 .addtocartmain:hover{
   background-color: var(--secondary);
@@ -1956,22 +2127,6 @@ main .card .addtocart.added{
 .get-more:hover{
   padding: 1rem;
   font-weight: 700;
-}
-
-.about-h3{
-  margin-top: 1.25rem;
-  margin-bottom: 0.5rem;
-  padding-left: 1.25rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-  text-transform: capitalize;
-}
-
-main .about-wrapper article{
-  padding-left: 2.5rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .input-field{
@@ -2112,7 +2267,6 @@ svg:hover{
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
-  /* make scrollbar transparent */
 }
 
 .order-options{
@@ -2335,15 +2489,6 @@ input[type='submit']:hover{
 @media (min-width: 768px){
   .md\:m-10{
     margin: 2.5rem;
-  }
-
-  .md\:mx-16{
-    margin-left: 4rem;
-    margin-right: 4rem;
-  }
-
-  .md\:ml-32{
-    margin-left: 8rem;
   }
 
   .md\:ml-10{
