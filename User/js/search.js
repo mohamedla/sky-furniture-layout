@@ -1,50 +1,22 @@
-import {addRemoveClass, showOrHideItem, displayHidden, hide}  from './index.js';
-        
-window.onload = document.querySelector('#searchval-display').innerHTML = localStorage.getItem("searchValue");
-
-// select order option
-const orderOptions = document.querySelectorAll('.order-options');
-
-    for (const option of orderOptions) {
-        option.addEventListener('click',()=>{
-            for (const opt of orderOptions) {
-                opt.style.background = null;
-                opt.style.color = null;
-            }
-            option.style.background = 'var(--secondary)';
-            option.style.color = 'var(--primary)';
-        });
-    }
-    
-// flib fillter arrow
-const fillterMenu = document.querySelectorAll('.fillter-menu');
-
-    for (const menu of fillterMenu) {
-        menu.addEventListener('click',()=>{
-            addRemoveClass('rotate-180',menu.querySelector('svg'));
-            showOrHideItem(menu.parentElement.querySelector('.options'));
-        });
-    }
-
-// Display filter bar
-const fillters = document.querySelector('.all-fillters'),
-    fillterTriger = document.querySelector('.fillters-triger'),
-    fillterClose = document.querySelector('.fillters-close');
-
-    fillterTriger.addEventListener('click',()=>{
-        displayHidden(fillters);
+$(window).on('load',()=>{
+    // Display the search subject
+    $('#searchval').text(localStorage.getItem("searchVal"));
+    // select sorting way
+    $(".orderBy > div").on('click',(event)=>{
+        $(event.currentTarget).parent().find('div').removeClass('selected');
+        $(event.currentTarget).addClass('selected');
     });
-
-    fillterClose.addEventListener('click',()=>{
-        hide(fillters);
+    // Display Filtters Bar
+    $('.orderBy .filterbtn').on('click',()=>{
+        $('.filtters').show(300);
     });
-
-// clear all fillters
-const filltersClear = document.querySelector('.fillters-clear');
-
-    filltersClear.addEventListener('click',()=>{
-        const radios = document.querySelectorAll('.all-fillters input[type=radio]:checked');
-        for (const radio of radios) {
-            radio.checked = false;
-        }
+    // Hide Filtters Bar
+    $('.filtters .close').on('click',()=>{
+        $('.filtters').hide(300);
     });
+    // clear all Filtters
+    $('.filtters .clean').on('click',()=>{
+        console.log($('.filtters input[type=radio]'));
+        $('.filtters input[type=radio]').prop("checked",false);
+    });
+});

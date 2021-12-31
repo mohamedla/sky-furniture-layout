@@ -1,16 +1,11 @@
-import {hide, displayHidden}  from './index.js';
-
-const submiting = document.getElementById('submit'),
-    finalSubmitPage = document.getElementById('finalsubmit'),
-    submitPage = document.querySelector('.orderchanges'),
-    orderChangesBtn = document.getElementById('orderchanges');
-
-    submiting.addEventListener('click',()=>{
-        alert('Order Submited');
-        window.location.replace('./index.html');
+$(window).on('load',()=>{
+    $("#orderchanges").on('click',()=>{
+        $(".submiting .orderchanges").slideUp(1000,()=>{
+            $(".submiting #finalsubmit").slideDown(1000);
+        });
     });
-
-    orderChangesBtn.addEventListener('click', ()=>{
-        hide(submitPage);
-        displayHidden(finalSubmitPage);
+    $(".submit div").on('click',()=>{
+        alert('Order Submited Succefully');
+        window.location.href = "index.html";
     });
+});

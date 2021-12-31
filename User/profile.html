@@ -5,235 +5,296 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sky Furniture</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="relative">
-    <!-- loader -->
+   <!-- loader -->
     <div id='loader-container'>
         <div id="loader-wrapper" class="fixed top-0 left-0 w-screen h-screen z-[250]">
-            <div id="loader">          
+            <div id="loader">  
+                <img src="./img/logo.png" alt="loader">        
             </div>
-            <div class="loader-section section-left left-0"></div>
-            <div class="loader-section section-right right-0"></div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
         </div>
     </div>
-    <!-- wrapper -->
-    <div class="m-2 grid grid-cols-1 relative">
-        <a name='top'></a>
+    <!-- content wrapper -->
+    <div class="wrapper">
         <!-- header -->
         <header>
             <div>
-                <a href="./index.html"><img class="w-28 bg-white p-1" src="img/logo_transparent.png" alt="Sky" title="Sky Furniture"></a>
+                <a href="#">
+                    <img src="img/logo_transparent.png" alt="Sky" title="Sky Furniture">
+                </a>
             </div>
-            <div class="title-div">
+            <div class="site-title">
                 <span>SKY FURNITURE</span>
             </div>
-            <div class="flex items-center justify-end">
-                <div class="flex justify-end items-center">
-                    <a href="./login.html" class="signbtn"><span>Log In</span></a>
-                    <a href="./signup.html" class="signbtn"><span>Sign UP</span></a>
+            <div class="user-exten">
+                <div class="notsign">
+                    <a href="./login.html"><span>Log In</span></a>
+                    <a href="./signup.html"><span>Sign UP</span></a>
                 </div>
-                <div class="hidden justify-end">
-                    <div class="mx-2">
-                        <a href="#" title="Profile">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                <div class="sign">
+                    <div>
+                        <a href="./profile.html" title="Profile">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
                         </a>
                     </div>
-                    <div class="mx-2 relative">
-                        <a href="#" title="Favorite">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    <div>
+                        <a href="./favourite.html" title="Favorite">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
                         </a>
                         <!-- budge -->
-                        <div class="header-budge-position">
-                            <span class="header-budge">10</span>
+                        <div class="item-counter">
+                            <span>10</span>
                         </div>
                     </div>
-                    <div class="mx-2 relative">
-                        <a href="#" title="Cart">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <div>
+                        <a href="cart.html" title="Cart">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                         </a>
                         <!-- budge -->
-                        <div class="header-budge-position">
-                            <span class="header-budge">2</span>
+                        <div class="item-counter">
+                            <span>2</span>
                         </div>
                     </div>
+                    <div id="logout" title="Logout">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+                    </div>
                 </div>
-                <span class="mx-1 mode"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg></span>
+                <div class="mode">
+                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                </div>
             </div>
         </header>
         <!-- To Page Top -->
-        <div class="gototop">
-            <a href="#top"><span><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3-3m0 0l3 3m-3-3v8m0-13a9 9 0 110 18 9 9 0 010-18z"></path></svg></span></a>
+        <div class="topscroll">
+            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"></path></svg>
         </div>
         <!-- navigation bar -->
-        <nav class="relative">
-            <div class="absolute top-3 left-3 sidebar-triger">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <nav>
+            <div class="sidebar-triger">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </div>
-            <div class="nav-bar">
-                <a href="./index.html" class="mx-4 hover:text-lg"><span>Home</span></a>
-                <a href="./about.html" class="mx-4 hover:text-lg"><span>About</span></a>
-                <a href="./contact.html" class="mx-4 hover:text-lg"><span>Contact</span></a>
-                <a href="#" class="mx-4  searchTriger">
-                    <span><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></span>
+            <div class="mainbar">
+                <a href="./index.html"><span>Home</span></a>
+                <a href="./about.html"><span>About</span></a>    
+                <a href="./contact.html"><span>Contact</span></a>
+                <a href="#" class="searchTriger">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </a>
             </div>
         </nav>
         <!-- side bar -->
-        <div class="side-bar-container hidden">
-            <div class="side-bar hidden">
-                <div class="sidebar-close mb-16">
-                    <svg class="w-6 h-6" fill="no brne" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        <section class="sidebar-container">
+            <div class="sidebar">
+                <div class="closer">
+                    <svg fill="no brne" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </div>
                 <!-- main links -->
-                <div class="flex flex-col items-end text-2xl font-bold mb-5">
-                    <a class="hover:text-xl" href="./search.html"><span>Products</span></a>
-                    <a class="hover:text-xl" href="./search.html"><span>Rooms</span></a>
-                    <a class="hover:text-xl" href="./about.html#brands"><span>Brands</span></a>
-                    <a class="hover:text-xl" href="./customorder.html"><span>Custom Order</span></a>
-                    <a class="hover:text-xl" href="./search.html"><span>Offers</span></a>
-                    <a class="hover:text-xl" href="./search.html"><span>What's New</span></a>
+                <div class="main">
+                    <a href="./search.html"><span>Products</span></a>
+                    <a href="./search.html"><span>Rooms</span></a>
+                    <a href="./about.html#brands"><span>Brands</span></a>
+                    <a href="./customorder.html"><span>Custom Order</span></a>
+                    <a href="./search.html"><span>Offers</span></a>
+                    <a href="./search.html"><span>What's New</span></a>
                 </div>
                 <!-- additions links -->
-                <div class="flex flex-col items-end font-semibold text-lg">
-                    <a class="hover:text-xl" href="./contact.html"><span>Contacts</span></a>
-                    <a class="hover:text-xl" href="./about.html#about"><span>About Sky</span></a>
-                    <a class="hover:text-xl" href="./about.html#policy"><span>Policy</span></a>
-                    <a class="hover:text-xl" href="./about.html#stores"><span>Stores</span></a>
+                <div class="addition">
+                    <a href="./contact.html"><span>Contacts</span></a>
+                    <a href="./about.html#about"><span>About Sky</span></a>
+                    <a href="./about.html#policy"><span>Policy</span></a>
+                    <a href="./about.html#stores"><span>Stores</span></a>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- search bar -->
-        <section class="searchbar hidden">
+        <section class="searchbar">
             <!-- Stander search bar -->
-            <div class="searchbar-content">
-                <div class="flex justify-center items-center mb-2">
-                    <label class="mx-2 font-bold text-lg">Search</label>
-                    <input id="searchvalue" class="search-input" type="text" placeholder="Enter Model/Brand/Category Name">
-                    <div class="searchbtn">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            <div class="content">
+                <div>
+                    <label>Search</label>
+                    <input id="searchvalue" type="text" placeholder="Enter Model/Brand/Category Name">
+                    <div class="btn">
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
                     </div>
                 </div>
-                <div class="flex justify-center items-center pb-3">
+                <div>
                     <!-- Advance Search Bar -->
                     <select class="catagoryselector" name="" id="" aria-placeholder="Choose Catagory">
                         <option value="" disabled selected>Select a Catagory</option>
-                        <optgroup label="Producte">
-                            <option value="">Chairs</option>
-                            <option value="">Tables & Disks</option>
-                            <option value="">Beds</option>
-                        </optgroup>
-                        <optgroup label="Room">
-                            <option class="" value="">Bed Room</option>
-                            <option value="">Dining Room</option>
-                            <option value="">Children Room</option>
-                            <option value="">Living Room</option>
-                            <option value="">Balcony & Gardn</option>
-                        </optgroup>
+                        <option value="">Chairs</option>
+                        <option value="">Tables & Disks</option>
+                        <option value="">Beds</option>
+                        <option value="">Bed Room</option>
+                        <option value="">Dining Room</option>
+                        <option value="">Children Room</option>
+                        <option value="">Living Room</option>
+                        <option value="">Balcony & Garden</option>
                     </select>
                 </div>
             </div>
         </section>
         <!-- content -->
-        <main class="m-2">
+        <main>
             <!-- wrapper -->
-            <div class="border-2 border-white p-2 rounded-lg">
-                <h1 class="text-3xl font-extrabold ml-5 my-5 text-center font-title">Account Info</h1>
-                <div class="sm:mx-10 md:ml-20 flex flex-col justify-center items-start border-2 border-[color:var(--secondary)] rounded-lg py-5">
-                    <div class="profileinput-section">
-                        <label for="name"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg> Name</label>
-                        <div class="profileinput-container">
-                            <input class="input-field-disabled border-2 trans-line-150 text-center w-[75%]" disabled value="John Allan"  type="text" name="name" id="">
-                            <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+            <div class="profile">
+                <h1>Account Info</h1>
+                <div>
+                    <div class="input">
+                        <label for="name">
+                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>&ThickSpace;
+                            Name
+                        </label>
+                        <div>
+                            <input disabled value="John Allan"  type="text" name="name" id="">
+                            <button  class="edit">
+                                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                            </button>
+                            <button  class="save" style="display: none;">
+                                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            </button>
                         </div>
                     </div>
-                    <div class="profileinput-section">
-                        <label for="email"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg> Email</label>
-                        <div class="profileinput-container">
-                            <input class="input-field-disabled border-2 trans-line-150 text-center w-[75%]" disabled value="Johan-allan@skyfurniture.com"  type="text" name="email" id="">
-                            <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <div class="input">
+                        <label for="email">
+                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>&ThickSpace;
+                            Email
+                        </label>
+                        <div>
+                            <input disabled value="Johan-allan@skyfurniture.com"  type="text" name="email" id="">
+                            <button  class="edit">
+                                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                            </button>
+                            <button  class="save" style="display: none;">
+                                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            </button>
                         </div>
                     </div>
-                    <div class="profileinput-section">
-                        <label for="birthday"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 3a1 1 0 011-1h.01a1 1 0 010 2H7a1 1 0 01-1-1zm2 3a1 1 0 00-2 0v1a2 2 0 00-2 2v1a2 2 0 00-2 2v.683a3.7 3.7 0 011.055.485 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0A3.7 3.7 0 0118 12.683V12a2 2 0 00-2-2V9a2 2 0 00-2-2V6a1 1 0 10-2 0v1h-1V6a1 1 0 10-2 0v1H8V6zm10 8.868a3.704 3.704 0 01-4.055-.036 1.704 1.704 0 00-1.89 0 3.704 3.704 0 01-4.11 0 1.704 1.704 0 00-1.89 0A3.704 3.704 0 012 14.868V17a1 1 0 001 1h14a1 1 0 001-1v-2.132zM9 3a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm3 0a1 1 0 011-1h.01a1 1 0 110 2H13a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg> Birthday</label>
-                        <div class="profileinput-container">
-                            <input class="input-field-disabled border-2 trans-line-150 text-center w-[75%]" disabled value="1992-10-25"  type="date" name="birthday" id="">
-                            <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <div class="input">
+                        <label for="birthday">
+                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 3a1 1 0 011-1h.01a1 1 0 010 2H7a1 1 0 01-1-1zm2 3a1 1 0 00-2 0v1a2 2 0 00-2 2v1a2 2 0 00-2 2v.683a3.7 3.7 0 011.055.485 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0A3.7 3.7 0 0118 12.683V12a2 2 0 00-2-2V9a2 2 0 00-2-2V6a1 1 0 10-2 0v1h-1V6a1 1 0 10-2 0v1H8V6zm10 8.868a3.704 3.704 0 01-4.055-.036 1.704 1.704 0 00-1.89 0 3.704 3.704 0 01-4.11 0 1.704 1.704 0 00-1.89 0A3.704 3.704 0 012 14.868V17a1 1 0 001 1h14a1 1 0 001-1v-2.132zM9 3a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm3 0a1 1 0 011-1h.01a1 1 0 110 2H13a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>&ThickSpace;
+                            Birthday
+                        </label>
+                        <div>
+                            <input disabled value="1992-10-25"  type="date" name="birthday" id="">
+                            <button  class="edit">
+                                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                            </button>
+                            <button  class="save" style="display: none;">
+                                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            </button>
                         </div>
                     </div>
-                    <div class="profileinput-section">
-                        <label for="address"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg> Address</label>
-                        <div class="profileinput-container">
-                            <input class="input-field-disabled border-2 trans-line-150 text-center w-[75%]" disabled value="1555 Lake Woodlands Dr"  type="text" name="address" id="">
-                            <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <div class="input">
+                        <label for="address">
+                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg> &ThickSpace;
+                            Address
+                        </label>
+                        <div>
+                            <input disabled value="1555 Lake Woodlands Dr"  type="text" name="address" id="">
+                            <button  class="edit">
+                                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                            </button>
+                            <button  class="save" style="display: none;">
+                                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            </button>
                         </div>
                     </div>
-                    <div class="p-2 flex items-center w-full m-1 flex-wrap justify-center">
-                        <div class="grid grid-cols-3 w-[90%]">
-                            <label class="font-bold" for="city">City</label>
-                            <label class="font-bold" for="state">State</label>
-                            <label class="font-bold" for="zip">Zip</label>
-                        </div>
-                        <div class="profileinput-container-addDetail">
-                            <input class="input-field-disabled border-2 trans-line-150 text-center w-[23%]" disabled value="Spring"  type="text" name="city" id="">
-                            <input class="input-field-disabled border-2 trans-line-150 text-center w-[23%]" disabled value="Texas"  type="text" name="state" id="">
-                            <input class="input-field-disabled border-2 trans-line-150 text-center w-[23%]" disabled value="77380"  type="text" name="zip" id="">
-                            <svg class="edit-addDetail w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save-addDetail hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <div class="addressDet">
+                        <table>
+                            <thead>
+                                <th><label for="city">City</label></th>
+                                <th><label for="state">State</label></th>
+                                <th><label for="zip">Zip</label></th>
+                                <th></th>
+                            </thead>
+                            <tbody>
+                                <td><input disabled value="Spring"  type="text" name="city"></td>
+                                <td><input disabled value="Texas"  type="text" name="state"></td>
+                                <td><input disabled value="77380"  type="text" name="zip"></td>
+                                <td>
+                                    <button  class="edit">
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </button>
+                                    <button  class="save" style="display: none;">
+                                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                    </button>
+                                </td>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="input">
+                        <label for="phone">
+                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>&ThickSpace; 
+                            Phone
+                        </label>
+                        <div>
+                            <input disabled value="+1-201-336-9567"  type="text" name="phone" id="">
+                            <button  class="edit">
+                                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                            </button>
+                            <button  class="save" style="display: none;">
+                                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            </button>
                         </div>
                     </div>
-                    <div class="profileinput-section">
-                        <label for="phone"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg> Phone</label>
-                        <div class="profileinput-container">
-                            <input class="input-field-disabled border-2 trans-line-150 text-center w-[75%]" disabled value="+1-201-336-9567"  type="text" name="phone" id="">
-                            <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <div class="input">
+                        <label for="mobile">
+                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>&ThickSpace; 
+                            Mobile Number
+                        </label>
+                        <div>
+                            <input disabled value="+1-555-489-1068"  type="text" name="mobile" id="">
+                            <button  class="edit">
+                                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                            </button>
+                            <button  class="save" style="display: none;">
+                                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            </button>
                         </div>
                     </div>
-                    <div class="profileinput-section">
-                        <label for="mobile"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg> Mobile Number</label>
-                        <div class="profileinput-container">
-                            <input class="input-field-disabled border-2 trans-line-150 text-center w-[75%]" disabled value="+1-555-489-1068"  type="text" name="mobile" id="">
-                            <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        </div>
-                    </div>
-                    <div class="profileinput-section">
-                        <label for="creditcard"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"></path></svg> Credit Card Number</label>
-                        <div class="profileinput-container">
-                            <input class="input-field-disabled border-2 trans-line-150 text-center w-[75%]" disabled value="5105105105105100"  type="text" name="credit card" id="">
-                            <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <div class="input">
+                        <label for="creditcard">
+                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"></path></svg> &ThickSpace;
+                            Credit Card Number
+                        </label>
+                        <div>
+                            <input disabled value="5105105105105100"  type="text" name="credit card" id="">
+                            <button  class="edit">
+                                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                            </button>
+                            <button  class="save" style="display: none;">
+                                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
         <!-- addition links -->
-        <footer class="mt-5 bg-[color:var(--secondary)] text-[color:var(--primary)]">
-            <div class=" grid grid-rows-3">
+        <footer>
+            <div>
                 <!-- sit addintional links -->
-                <div class="row-span-2 min-h-[80px] flex flex-col md:flex-row justify-center items-center text-lg font-bold underline underline-offset-1">
-                    <a class="mx-2" href="./contact.html"><span>Customer Service</span></a>
-                    <a class="mx-2" href="./about.html#about"><span>About Sky</span></a>
-                    <a class="mx-2" href="./about.html#stores"><span>Stores</span></a>
-                    <a class="mx-2" href="./index.html"><span>Home</span></a>
-                    <a class="mx-2" href="./about.html#policy"><span>Policy</span></a>
+                <div class="additional">
+                    <a href="./contact.html"><span>Customer Service</span></a>
+                    <a href="./about.html#about"><span>About Sky</span></a>
+                    <a href="./about.html#stores"><span>Stores</span></a>
+                    <a href="#"><span>Home</span></a>
+                    <a href="./about.html#policy"><span>Policy</span></a>
                 </div>
                 <!-- developer links -->
-                <div class="flex items-end justify-center">
-                    <span class="mx-5">&copy;Mohamed.<sup>self</sup></span>
+                <div class="dev">
+                    <span>&copy;Mohamed.<sup>self</sup></span>
                     <a href="https://github.com/mohamedla" target="blank"><span>Githup Profile</span></a>
                 </div>
             </div>
         </footer>
     </div>
-    <script type="module" src="js/index.js"></script>
-    <script type="module" src="js/profile.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/profile.js"></script>
 </body>
 </html>
