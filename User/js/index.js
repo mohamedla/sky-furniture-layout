@@ -21,7 +21,7 @@ $(window).on('load',()=>{
     };
 
     // hide or view user option
-    let signed = false;
+    let signed = true;
     if (signed) {
       $('header .user-exten .notsign').css({"display":"none"});
     }else{

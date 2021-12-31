@@ -2,7 +2,7 @@ $(window).on('load',()=>{
     // scroll the sliders horz
     var slidVal = 0;
     $('.slider-container .scroll-arrow.right').on('click',(event)=>{
-        const slider = ($(event.target).parent().parent().find(".slider"))[0];
+        const slider = ($(event.currentTarget).parent().find(".slider"))[0];
         var maxSlideVal = slider.scrollWidth - slider.clientWidth;
         if (slidVal < maxSlideVal) {
             slidVal += 300;
@@ -14,16 +14,16 @@ $(window).on('load',()=>{
         if (slidVal > 0) {
             slidVal -= 300;
         }
-        ($(event.target).parent().parent().find(".slider"))[0].scroll({left:slidVal,behavior: "smooth"});
+        ($(event.currentTarget).parent().find(".slider"))[0].scroll({left:slidVal,behavior: "smooth"});
     });
 
     // add to favourit
-    $('.slider-container .slider .card .favourit-budge').on('click',(event)=>{
-        $(event.target).parent().toggleClass('added');
+    $('.card .favourit-budge > div').on('click',(event)=>{
+        $(event.currentTarget).toggleClass('added');
     });
 
     // add to cart
-    $('.slider-container .slider .card .addtocart').on('click',(event)=>{
-        $(event.target).parent().toggleClass('added');
+    $('.card .addtocart').on('click',(event)=>{
+        $(event.currentTarget).toggleClass('added');
     });
 });

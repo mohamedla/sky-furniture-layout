@@ -1,24 +1,12 @@
-function showOrHideItem(hiddenItem) {
-    if(hiddenItem.classList.contains('hidden')){
-        hiddenItem.classList.remove('hidden');
-    }else{
-        hiddenItem.classList.add('hidden');
-    }
-}
-
-// hide/show password field
-const showPass = document.getElementById('show-pass'),
-    passwordField = document.querySelector('#password');
-var passSVGs = document.querySelectorAll('#show-pass svg');
-
-
-    showPass.addEventListener('click',()=>{
-        for(let passSVG of passSVGs){
-            showOrHideItem(passSVG);
-        }
-        if (passwordField.type == 'text') {
-            passwordField.type = 'password';
-        } else {
-            passwordField.type = 'text';
+$(window).on('load',()=>{
+    // Display or hide password
+    $('#show-pass').on('click', ()=>{
+        if ($('input#password').attr("type") == 'password') {
+            $('input#password').attr("type","text");
+            $('#show-pass svg').toggle();
+        }else{
+            $('input#password').attr("type","password");
+            $('#show-pass svg').toggle();
         }
     });
+});
