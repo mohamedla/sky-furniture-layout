@@ -1,370 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sky Furniture</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body class="relative">
-    <!-- loader -->
-    <div id='loader-container'>
-        <div id="loader-wrapper" class="fixed top-0 left-0 w-screen h-screen z-[250]">
-            <div id="loader">          
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sky Furniture</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body class="relative">
+        <!-- loader -->
+        <div id='loader-container'>
+            <div id="loader-wrapper" class="fixed top-0 left-0 w-screen h-screen z-[250]">
+                <div id="loader">  
+                    <img src="./img/logo.png" alt="loader">        
+                </div>
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
             </div>
-            <div class="loader-section section-left left-0"></div>
-            <div class="loader-section section-right right-0"></div>
         </div>
-    </div>
-    <div class="grid grid-cols-4 min lg:min-h-screen">   
-        <header>
-            <div>
-                <a href="#"><img class="w-[65px] bg-white p-1" src="img/logo_transparent.png" alt="Sky" title="Sky Furniture"></a>
-            </div>
-            <div class="title-div">
-                <span>SKY FURNITURE</span>
-            </div>
-            <div class="flex items-center justify-end">
-                <div class="flex justify-end">
-                    <div id="display-menu" class="mx-2 lg:hidden" title="Display Menu">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <!-- Wrapper -->
+        <div class="wrapper">   
+            <header>
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo_transparent.png" alt="Sky" title="Sky Furniture"></a>
+                </div>
+                <div class="title">
+                    <span>SKY FURNITURE</span>
+                </div>
+                <div class="links">
+                    <div>
+                        <div id="show-menu" title="Show Menu">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        </div>
+                        <div id="logout" title="Logout">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+                        </div>
                     </div>
-                    <div id="logout" class="mx-2" title="Logout">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+                    <div class="mode">
+                        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                     </div>
                 </div>
-                <span class="mx-1 mode"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg></span>
-            </div>
-        </header>
-        <!-- side bar -->
-        <nav class="hidden lg:block">
-            <!-- container -->
-            <div class="container">
-                <!-- Home -->
-                <div class="maindiv">
-                    <div class="trig-menu">
-                        <a href="./index.html">
+            </header>
+            <!-- side bar -->
+            <nav>
+                <!-- container -->
+                <div class="container">
+                    <!-- Home -->
+                    <div class="maindiv">
+                        <div class="trigger">
+                            <a href="./index.html">
+                                <div>
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                                    &ThickSpace;<span>Home</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Employees -->
+                    <div class="maindiv">
+                        <details>
+                            <summary>
+                                <div>
+                                    <svg class="inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path></svg>
+                                    &ThickSpace;<span>Employees</span>
+                                </div>
+                            </summary>
                             <div>
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
-                                &ThickSpace;<span>Home</span>
+                                <a href="./addEmployee.html">
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path></svg>
+                                    <span>Add New Employee</span>
+                                </a>
+                                <a href="./manageEmployee.html">
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    <span>Manage Employees</span>
+                                </a>
                             </div>
-                        </a>
+                        </details>
                     </div>
-                </div>
-
-                <!-- Employees -->
-                <div class="maindiv">
-                    <div class="trig-menu">
-                        <div>
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path></svg>
-                            &ThickSpace;<span>Employees</span>
-                        </div>
-                        <svg class="w-6 h-6 arrow rotate-180 transition-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <div class="hidden options">
-                        <div>
-                            <a href="./addEmployee.html">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path></svg>
-                                <span>Add New Employee</span>
-                            </a>
-                            <a href="./manageEmployee.html">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                                <span>Manage Employees</span>
+                    <!-- Clients -->
+                    <div class="maindiv">
+                        <div class="trigger">
+                            <a href="manageClient.html">
+                                <div>
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path></svg>
+                                    &ThickSpace;<span>Clients</span>
+                                </div>
                             </a>
                         </div>
                     </div>
-                </div>
-
-                <!-- Clients -->
-                <div class="maindiv">
-                    <div class="trig-menu">
-                        <a href="manageClient.html">
+                    <!-- Brand -->
+                    <div class="maindiv">
+                        <details>
+                            <summary>
+                                <div>
+                                    <svg class="inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
+                                    &ThickSpace;<span>Brands</span>
+                                </div>
+                            </summary>
                             <div>
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path></svg>
-                                &ThickSpace;<span>Clients</span>
+                                <a href="addBrand.html">
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path></svg>
+                                    <span>Add New Brand</span>
+                                </a>
+                                <a href="manageBrands.html">
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    <span>Manage Brands</span>
+                                </a>
                             </div>
-                        </a>
+                        </details>
+                    </div>
+                    <!-- Catogry -->
+                    <div class="maindiv">
+                        <details>
+                            <summary>
+                                <div>
+                                    <svg class="inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z" clip-rule="evenodd"></path><path d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z"></path></svg>
+                                    &ThickSpace;<span>Categories</span>
+                                </div>
+                            </summary>
+                            <div>
+                                <a href="addCategory.html">
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path></svg>
+                                    <span>Add New Category</span>
+                                </a>
+                                <a href="mangeCatogry.html">
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    <span>Manage Categories</span>
+                                </a>
+                            </div>
+                        </details>
+                    </div>
+                    <!-- Product -->
+                    <div class="maindiv selected">
+                        <details>
+                            <summary>
+                                <div>
+                                    <svg class="inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"></path><path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                                    &ThickSpace;<span>Products</span>
+                                </div>
+                            </summary>
+                            <div>
+                                <a href="addItem.html">
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path></svg>
+                                    <span>Add New Product</span>
+                                </a>
+                                <a href="manageItem.html">
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    <span>Manage Products</span>
+                                </a>
+                            </div>
+                        </details>
+                    </div>
+                    <!-- Orders -->
+                    <div class="maindiv">
+                        <details>
+                            <summary>
+                                <div>
+                                    <svg class="inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
+                                    &ThickSpace;<span>Orders</span>
+                                </div>
+                            </summary>
+                            <div>
+                                <a href="manageCustomOr.html">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8 2a1 1 0 000 2h2a1 1 0 100-2H8z"></path><path d="M3 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v6h-4.586l1.293-1.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L10.414 13H15v3a2 2 0 01-2 2H5a2 2 0 01-2-2V5zM15 11h2a1 1 0 110 2h-2v-2z"></path></svg>
+                                    <span>Custom Orders</span>
+                                </a>
+                                <a href="manageOreder.html">
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
+                                    <span>Orders</span>
+                                </a>
+                            </div>
+                        </details>
+                    </div>
+                    <!-- Offers -->
+                    <div class="maindiv">
+                        <details>
+                            <summary>
+                                <div>
+                                    <svg class="inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path></svg>
+                                    &ThickSpace;<span>Offers</span>
+                                </div>
+                            </summary>
+                            <div>
+                                <a href="addOffer.html">
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path></svg>
+                                    <span>Add New Offer</span>
+                                </a>
+                                <a href="manageOffers.html">
+                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    <span>Manage Offers</span>
+                                </a>
+                            </div>
+                        </details>
                     </div>
                 </div>
-
-                <!-- Brand -->
-                <div class="maindiv">
-                    <div class="trig-menu">
+            </nav>
+            <!-- main content -->
+            <main>
+                <!-- wrapper -->
+                <div class="control">
+                    <h1>Product (Italian Bosshkash Chair)</h1>
+                    <form action="#">
+                        <!-- model -->
                         <div>
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
-                            &ThickSpace;<span>Brands</span>
+                            <label for="model">Model</label>
+                            <div class="input-con">
+                                <input class="input disabled" disabled value="Italian Bosshkash Chair"  type="text" name="model" required>
+                                <div class="change">
+                                    <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                            </div>
                         </div>
-                        <svg class="w-6 h-6 arrow rotate-180 transition-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <div class="hidden options">
+                        <!-- barnd and category -->
                         <div>
-                            <a href="addBrand.html">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path></svg>
-                                <span>Add New Brand</span>
-                            </a>
-                            <a href="manageBrands.html">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                                <span>Manage Brands</span>
-                            </a>
+                            <div class="input-2col">
+                                <label for="brand">Brand</label>
+                                <label for="category">Category</label>
+                            </div>
+                            <div class="input-2col">
+                                <div class="input-con mr-1">
+                                    <select class="input disabled" name="brand" disabled required aria-placeholder="Choose Catagory">
+                                        <option value="" selected>Ikea</option>
+                                        <option value="">CALIA ITALIA</option>
+                                        <option value="">CATTELAN ITALIA</option>
+                                        <option value="">NDESIGN</option>
+                                        <option value="">CASA</option>
+                                        <option value="">EHEM.</option>   
+                                    </select>
+                                    <div class="change">
+                                        <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                </div>
+                                <div class="input-con">
+                                    <select class="input disabled" name="brand" disabled required aria-placeholder="Choose Catagory">
+                                        <option value="" selected>Chairs</option>
+                                        <option value="">Tables & Disks</option>
+                                        <option value="">Beds</option>
+                                        <option value="">Bed Room</option>
+                                        <option value="">Dining Room</option>
+                                        <option value="">Living Room</option>   
+                                    </select>
+                                    <div class="change">
+                                        <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        <!-- Main Image -->
+                        <div>
+                            <label for="mainImg">Main Image</label>
+                            <div class="input-con">
+                                <img id="image-0" src="../User/img/item-2/ekeroe-armchair-skiftebo-dark-grey.webp" alt="">
+                                <input id="image-0" class="input disabled" style="width: 80%;" disabled required value="Italian Bosshkash Chair"  type="file" name="mainImg" accept="image/*">
+                                <div class="change">
+                                    <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                            </div>
+                        </div>
+                        <!-- Extra Images -->
+                        <div>
+                            <div class="input-con" style="justify-content: space-between;">
+                                <label for="extraImg">Extra Images</label>
+                                <svg class="addImg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div class="input-con">
+                                <img id="image-0" src="../User/img/item-2/ekeroe-armchair-skiftebo-dark-grey-2.webp" alt="">
+                                <input id="image-0" class="input disabled" style="width: 80%;" disabled required value="Italian Bosshkash Chair"  type="file" name="extraImg1" accept="image/*">
+                                <div class="change">
+                                    <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                </div>
+                                <div>
+                                    <div class="remove">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-con">
+                                <img id="image-0" src="../User/img/item-2/ekeroe-armchair-skiftebo-dark-grey-3.webp" alt="">
+                                <input id="image-0" class="input disabled" style="width: 80%;" disabled required value="Italian Bosshkash Chair"  type="file" name="extraImg2" accept="image/*">
+                                <div class="change">
+                                    <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                </div>
+                                <div>
+                                    <div class="remove">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Color and number of Pieces -->
+                        <div>
+                            <div class="input-2col">
+                                <label for="color">Color</label>
+                                <label for="pieces">Pieces</label>
+                                <svg class="addColor" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div class="input-2col mb-1">
+                                <div class="input-con mr-1">
+                                    <input class="input disabled" disabled required value="#34dd66"  type="text" name="color">
+                                    <div class="change">
+                                        <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                </div>
+                                <div class="input-con">
+                                    <input class="input disabled" disabled required min="0" value="10"  type="number" name="pieces">
+                                    <div class="change">
+                                        <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                    <div class="remove">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-2col mb-1">
+                                <div class="input-con mr-1">
+                                    <input class="input disabled" disabled required value="#34dd66"  type="text" name="color">
+                                    <div class="change">
+                                        <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                </div>
+                                <div class="input-con">
+                                    <input class="input disabled" disabled required min="0" value="10"  type="number" name="pieces">
+                                    <div class="change">
+                                        <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                    <div class="remove">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-2col mb-1">
+                                <div class="input-con mr-1">
+                                    <input class="input disabled" disabled required value="#34dd66"  type="text" name="color">
+                                    <div class="change">
+                                        <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                </div>
+                                <div class="input-con">
+                                    <input class="input disabled" disabled required min="0" value="10"  type="number" name="pieces">
+                                    <div class="change">
+                                        <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                    <div class="remove">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Price and Discount -->
+                        <div>
+                            <div class="input-2col">
+                                <label for="price">Price</label>
+                                <label for="discount">Discount</label>
+                            </div>
+                            <div class="input-2col">
+                                <div class="input-con mr-1">
+                                    <input class="input disabled" disabled required value="989" min="0" step="0.01" type="number" name="price">
+                                    <div class="change">
+                                        <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                </div>
+                                <div class="input-con">
+                                    <input class="input disabled" disabled required min="0"  value="10" min="0" max="100" step="0.01"  type="number" name="discount">
+                                    <div class="change">
+                                        <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Width, Height and Depth -->
+                        <div>
+                            <div class="input-3col">
+                                <label for="width">Width</label>
+                                <label for="height">Height</label>
+                                <label for="depth">Depth</label>
+                            </div>
+                            <div class="input-3col">
+                                <div class="input-con mr-1">
+                                    <input class="input disabled" disabled required value="25.5" min="0" step="0.01" type="number" name="width">
+                                    <div class="change">
+                                        <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                </div>
+                                <div class="input-con">
+                                    <input class="input disabled" disabled required value="58.67" min="0" step="0.01"  type="number" name="height">
+                                    <div class="change">
+                                        <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                </div>
+                                <div class="input-con">
+                                    <input class="input disabled" disabled required value="78.34" min="0" step="0.01"  type="number" name="depth">
+                                    <div class="change">
+                                        <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Description -->
+                        <div>
+                            <label for="description">Description</label>
+                            <div class="input-con">
+                                <textarea class="input disabled" disabled name="description" cols="30" rows="5" required>
+EKERÖ armchair has a sleek, modern look with two side pieces that meet in the back – and lumbar support for added comfort!.
+The reversible back cushion gives soft support for your back and two different sides to wear.
+The back cushion can be moved around to fit your sitting style.
+This cover is made from durable SKIFTEBO polyester fabric. It has a nice lustre and a two-tone effect with a light texture that feels firm to the touch.
+The cover has a lightfastness level of 5 (the ability to resist colour fading) on a scale of 1 to 8. According to industry standards, a lightfastness level of 4 or higher is suitable for home use.
+This cover’s ability to resist abrasion has been tested to handle 35,000 cycles. 15,000 cycles or more is suitable for furniture used every day at home. Over 30,000 cycles means a good ability to resist abrasion.
+                                </textarea>
+                                <div class="change">
+                                    <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                            </div>
+                        </div>
+                        <!-- Materials -->
+                        <div>
+                            <label for="materias">Materials</label>
+                            <div class="input-con">
+                                <textarea class="input disabled" disabled name="materias" cols="30" rows="5" required>
+Supporting Fabric: 100% polypropylene
+Frame: Particleboard, Fibreboard, Plywood, Polyurethane foam 25 kg/cu.m., Polyester wadding, Laminated veneer lumber, Solid wood
+Fixed Seat: Polyurethane foam 30 kg/cu.m., Polyester wadding
+Loose Cushion: 50% cut polyurethane foam/ 50% polyester fibres
+Leg: Steel, Powder coating
+Fabric: 100 % polyester
+                                </textarea>
+                                <div class="change">
+                                    <svg class="edit" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="input-con">
+                            <button type="submit">Save Changes</button>
+                        </div>
+                    </form>
                 </div>
-
-                <!-- Catogry -->
-                <div class="maindiv">
-                    <div class="trig-menu">
-                        <div>
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z" clip-rule="evenodd"></path><path d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z"></path></svg>
-                            &ThickSpace;<span>Categories</span>
-                        </div>
-                        <svg class="w-6 h-6 arrow rotate-180 transition-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <div class="hidden options">
-                        <div>
-                            <a href="addCategory.html">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path></svg>
-                                <span>Add New Category</span>
-                            </a>
-                            <a href="mangeCatogry.html">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                                <span>Manage Categories</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product -->
-                <div class="maindiv selected">
-                    <div class="trig-menu">
-                        <div>
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"></path><path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                            &ThickSpace;<span>Products</span>
-                        </div>
-                        <svg class="w-6 h-6 arrow rotate-180 transition-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <div class="hidden options">
-                        <div>
-                            <a href="addItem.html">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path></svg>
-                                <span>Add New Product</span>
-                            </a>
-                            <a href="manageItem.html">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                                <span>Manage Products</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Orders -->
-                <div class="maindiv">
-                    <div class="trig-menu">
-                        <div>
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
-                            &ThickSpace;<span>Orders</span>
-                        </div>
-                        <svg class="w-6 h-6 arrow rotate-180 transition-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <div class="hidden options">
-                        <div>
-                            <a href="manageOreder.html">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
-                                <span>Orders</span>
-                            </a>
-                            <a href="manageCustomOr.html">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8 2a1 1 0 000 2h2a1 1 0 100-2H8z"></path><path d="M3 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v6h-4.586l1.293-1.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L10.414 13H15v3a2 2 0 01-2 2H5a2 2 0 01-2-2V5zM15 11h2a1 1 0 110 2h-2v-2z"></path></svg>
-                                <span>Custom Orders</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Offers -->
-                <div class="maindiv">
-                    <div class="trig-menu">
-                        <div>
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path></svg>
-                            &ThickSpace;<span>Offers</span>
-                        </div>
-                        <svg class="w-6 h-6 arrow rotate-180 transition-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <div class="hidden options">
-                        <div>
-                            <a href="addOffer.html">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path></svg>
-                                <span>Add New Offer</span>
-                            </a>
-                            <a href="manageOffers.html">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                                <span>Manage Offers</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <!-- main content -->
-        <main>
-           <!-- wrapper -->
-           <div>
-                <h1 class="text-xl font-extrabold ml-5 my-5">Product (Italian Bosshkash Chair)</h1>
+            </main>
+            <footer>
+                <!-- developer links -->
                 <div>
-                    <div class="objectinput-section">
-                        <label for="model">Model</label>
-                        <div class="objectinput-container">
-                            <input class="input input-field-disabled input-field-a trans-line-150" disabled value="Italian Bosshkash Chair"  type="text" name="model">
-                            <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        </div>
-                    </div>
-                    <div class="p-2 flex items-center w-full m-1 flex-wrap justify-center">
-                        <div class="grid grid-cols-2 w-[90%]">
-                            <label class="font-bold" for="brand">Brand</label>
-                            <label class="font-bold" for="category">Category</label>
-                        </div>
-                        <div class="objectinput-container-addDetail">
-                            <select class="input appearance-none input-field-disabled border-2 mr-2" style="width:45%;" name="brand" disabled aria-placeholder="Choose Catagory">
-                                <option value="" selected>Ikea</option>
-                                <option value="">CALIA ITALIA</option>
-                                <option value="">CATTELAN ITALIA</option>
-                                <option value="">NDESIGN</option>
-                                <option value="">CASA</option>
-                                <option value="">EHEM.</option>   
-                            </select>
-                            <select class="input appearance-none input-field-disabled border-2 w-[45%]" style="width:45%;" name="brand" disabled aria-placeholder="Choose Catagory">
-                                <option value="" selected>Chairs</option>
-                                <option value="">Tables & Disks</option>
-                                <option value="">Beds</option>
-                                <option value="">Bed Room</option>
-                                <option value="">Dining Room</option>
-                                <option value="">Living Room</option>   
-                            </select>
-                            <svg class="edit-addDetail w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save-addDetail hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        </div>
-                    </div>
-                    <div class="objectinput-section image">
-                        <label for="images">Images</label>
-                        <div class="objectinput-container">
-                            <img id="image-0" class="w-20 h-20 rounded-lg m-1" src="../User/img/item-2/ekeroe-armchair-skiftebo-dark-grey-2.webp" alt="">
-                            <input id="image-0" class="input input-field-disabled input-field-a trans-line-150" style="width: 80%;" disabled value="Italian Bosshkash Chair"  type="file" name="images" accept="image/*">
-                            <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        </div>
-                        <div class="objectinput-container">
-                            <img id="image-1" class="w-20 h-20 rounded-lg m-1" src="../User/img/item-2/ekeroe-armchair-skiftebo-dark-grey-3.webp" alt="">
-                            <input id="image-1" class="input input-field-disabled input-field-a trans-line-150" style="width: 80%;" disabled value="Italian Bosshkash Chair"  type="file" name="images" accept="image/*">
-                            <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        </div>
-                        <div class="objectinput-container">
-                            <img id="image-2" class="w-20 h-20 rounded-lg m-1" src="../User/img/item-2/ekeroe-armchair-skiftebo-dark-grey-4.webp" alt="">
-                            <input id="image-2" class="input input-field-disabled input-field-a trans-line-150" style="width: 80%;" disabled value="Italian Bosshkash Chair"  type="file" name="images" accept="image/*">
-                            <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        </div>
-                    </div>
-                    <div class="objectinput-section image">
-                        <div class="grid grid-cols-3 w-[90%]">
-                            <label for="color">Color</label>
-                            <label for="pieces">Pieces</label>
-                            <label for="pieces">Image</label>
-                        </div>
-                        <div class="objectinput-container-addDetail mb-2">
-                            <input class="input input-field-disabled border-2 trans-line-150 text-center" style="width:25%;" disabled value="#34dd66" min="0" step="0.01" type="text" name="color">
-                            <input class="input input-field-disabled border-2 trans-line-150 text-center" style="width:25%;" disabled value="15" min="0" step="0.01"  type="number" name="pieces">
-                            <img id="image-0" class="w-20 h-20 rounded-lg m-1" src="../User/img/item-2/ekeroe-armchair-skiftebo-dark-grey.webp">
-                            <input id="image-0" class="input input-field-disabled input-field-a trans-line-150" style="width: 32%;" disabled value="Italian Bosshkash Chair"  type="file" name="images" accept="image/*">
-                            <svg class="edit-addDetail w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save-addDetail hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        </div>
-                        <div class="objectinput-container-addDetail mb-2">
-                            <input class="input input-field-disabled border-2 trans-line-150 text-center" style="width:25%;" disabled value="#3ad76c" min="0" step="0.01" type="text" name="color">
-                            <input class="input input-field-disabled border-2 trans-line-150 text-center" style="width:25%;" disabled value="10" min="0" step="0.01"  type="number" name="pieces">
-                            <img id="image-1" class="w-20 h-20 rounded-lg m-1" src="../User/img/item-2/ekeroe-armchair-skiftebo-yellow.webp">
-                            <input id="image-1" class="input input-field-disabled input-field-a trans-line-150" style="width: 32%;" disabled value="Italian Bosshkash Chair"  type="file" name="images" accept="image/*">
-                            <svg class="edit-addDetail w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save-addDetail hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        </div>
-                        <div class="objectinput-container-addDetail mb-2">
-                            <input class="input input-field-disabled border-2 trans-line-150 text-center" style="width:25%;" disabled value="#cd346f" min="0" step="0.01" type="text" name="color">
-                            <input class="input input-field-disabled border-2 trans-line-150 text-center" style="width:25%;" disabled value="20" min="0" step="0.01"  type="number" name="pieces">
-                            <img id="image-2" class="w-20 h-20 rounded-lg m-1" src="../User/img/item-2/ekeroe-armchair-skiftebo-dark-blue_.webp">
-                            <input id="image-2" class="input input-field-disabled input-field-a trans-line-150" style="width: 32%;" disabled value="Italian Bosshkash Chair"  type="file" name="images" accept="image/*">
-                            <svg class="edit-addDetail w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save-addDetail hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        </div>
-                    </div>
-                    <div class="objectinput-section">
-                        <div class="grid grid-cols-2 w-[90%]">
-                            <label for="price">Price</label>
-                            <label for="discount">Discount</label>
-                        </div>
-                        <div class="objectinput-container-addDetail ">
-                            <input class="input input-field-disabled border-2 trans-line-150 text-center" style="width:45%;" disabled value="989" min="0" step="0.01" type="number" name="price">
-                            <input class="input input-field-disabled border-2 trans-line-150 text-center" style="width:45%;" disabled value="10" min="0" step="0.01"  type="number" name="discount">
-                            <svg class="edit-addDetail w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save-addDetail hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        </div>
-                    </div>
-                    <div class="objectinput-section">
-                        <div class="grid grid-cols-3 w-[90%]">
-                            <label for="width">Width</label>
-                            <label for="height">Height</label>
-                            <label for="depth">Depth</label>
-                        </div>
-                        <div class="objectinput-container-addDetail">
-                            <input class="input input-field-disabled border-2 trans-line-150 text-center" disabled value="25.5" min="0" step="0.01" type="number" name="width">
-                            <input class="input input-field-disabled border-2 trans-line-150 text-center" disabled value="58.67" min="0" step="0.01"  type="number" name="height">
-                            <input class="input input-field-disabled border-2 trans-line-150 text-center" disabled value="78.34" min="0" step="0.01"  type="number" name="depth">
-                            <svg class="edit-addDetail w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save-addDetail hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        </div>
-                    </div>
-                    <div class="objectinput-section">
-                        <label for="description">Description</label>
-                        <div class="objectinput-container">
-                            <textarea class="input input-field-disabled input-field-a trans-line-150" disabled name="description" cols="30" rows="3">EKERÖ armchair has a sleek, modern look with two side pieces that meet in the back – and lumbar support for added comfort!.
-
-                                The reversible back cushion gives soft support for your back and two different sides to wear.
-                                The back cushion can be moved around to fit your sitting style.
-                                This cover is made from durable SKIFTEBO polyester fabric. It has a nice lustre and a two-tone effect with a light texture that feels firm to the touch.
-                                The cover has a lightfastness level of 5 (the ability to resist colour fading) on a scale of 1 to 8. According to industry standards, a lightfastness level of 4 or higher is suitable for home use.
-                                This cover’s ability to resist abrasion has been tested to handle 35,000 cycles. 15,000 cycles or more is suitable for furniture used every day at home. Over 30,000 cycles means a good ability to resist abrasion.
-                            </textarea>
-                            <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        </div>
-                    </div>
-                    <div class="objectinput-section">
-                        <label for="materias">Materials</label>
-                        <div class="objectinput-container">
-                            <textarea class="input input-field-disabled input-field-a trans-line-150" disabled name="materias" cols="30" rows="3">Supporting Fabric: 100% polypropylene
-                                Frame: Particleboard, Fibreboard, Plywood, Polyurethane foam 25 kg/cu.m., Polyester wadding, Laminated veneer lumber, Solid wood
-                                Fixed Seat: Polyurethane foam 30 kg/cu.m., Polyester wadding
-                                Loose Cushion: 50% cut polyurethane foam/ 50% polyester fibres
-                                Leg: Steel, Powder coating
-                                Fabric: 100 % polyester
-                            </textarea>
-                            <svg class="edit w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path></svg>
-                            <svg class="save hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        </div>
-                    </div>
+                    <span class="mx-5">&copy;Mohamed.<sup>self</sup></span>
+                    <a href="https://github.com/mohamedla" target="blank"><span>Github Profile</span></a>
                 </div>
-            </div>
-        </main>
+            </footer>
+        </div>
 
-        <footer>
-            <!-- developer links -->
-            <div class="flex items-end justify-center">
-                <span class="mx-5">&copy;Mohamed.<sup>self</sup></span>
-                <a href="https://github.com/mohamedla" target="blank"><span>Githup Profile</span></a>
-            </div>
-        </footer>
-    </div>
-
-    <script type="module" src="js/index.js"></script>
-    <script type="module" src="js/object.js"></script>
-</body>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/object.js"></script>
+    </body>
 </html>
